@@ -1,3 +1,6 @@
+import { IoTerminalSharp } from "react-icons/io5";
+import TerminalModal from "./modal/TerminalModal.tsx";
+
 export default function Navigator() {
   return (
     <nav className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-sm z-50 shadow-sm">
@@ -15,6 +18,7 @@ export default function Navigator() {
           <a href="#page-4" className="hover:text-blue-500 transition-colors">
             Etc
           </a>
+          <TerminalModal/>
         </div>
       </div>
     </nav>
