@@ -7,7 +7,7 @@ export default function IntroPage() {
       <div className="absolute inset-0">
         <img src={WallPaper} alt="wallPaper" className="w-full h-full object-cover" />
       </div>
-      <div className="relative z-10 flex justify-center items-center">
+      <div className="relative w-full h-full z-40 flex justify-center items-center">
         <Terminal/>
       </div>
     </div>
