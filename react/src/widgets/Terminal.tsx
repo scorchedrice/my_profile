@@ -1,36 +1,13 @@
-import {useState, KeyboardEvent, useRef, useEffect} from 'react';
-import { terminal, welcomeTerminal } from '../feature/terminal.ts'
+import { welcomeTerminal } from '../feature/terminal.ts'
+import useTerminal from '../feature/hooks/useTerminal.ts'
+
 export default function Terminal() {
-  const [commandHistory, setCommandHistory] = useState<string[]>([]);
-  const [currentCommand, setCurrentCommand] = useState('');
-  const terminalRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    if (terminalRef.current) {
-      terminalRef.current.scrollTop = terminalRef.current.scrollHeight;
-    }
-  }, [commandHistory]);
-  const handleCommand = (command: string) => {
-    const trimmedCommand = command.trim().toLowerCase();
-    let response = terminal(trimmedCommand) || `Command not found: ${trimmedCommand}. Type 'help' for available commands.`;
-
-    if (response === 'CLEAR_TERMINAL') {
-      setCommandHistory([]);
-      return;
-    }
-
-    setCommandHistory(prev => [
-      ...prev,
-      `$ ${command}`,
-      ...response.split('\n')
-    ]);
-  };
-
-  const handleKeyPress = (e: KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter') {
-      handleCommand(currentCommand);
-      setCurrentCommand('');
-    }
-  };
+  const { commandHistory,
+    currentCommand,
+    handleKeyPress,
+    setCurrentCommand,
+    terminalRef,
+  } = useTerminal()
 
   return (
     <div className="max-w-2xl mx-auto mt-12 bg-[#2d2d2d] rounded-lg shadow-2xl overflow-hidden">
