@@ -1,0 +1,9 @@
+.pg-wrapper {
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: auto;
+}
+
+html, body {
+    overflow: hidden;
+    overscroll-behavior: none;
+}

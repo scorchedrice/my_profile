@@ -13,8 +13,14 @@ export default function TerminalModal() {
       bottom: 'auto',
       marginRight: '-50%',
       transform: 'translate(-50%, -50%)',
-      color: 'transparent',
+      background: 'transparent',
+      border: 'none',
+      boxShadow: 'none',
     },
+    overlay: {
+      backgroundColor: 'transparent',
+      boxShadow: 'none',
+    }
   };
 
   const [modalIsOpen, setModalIsOpen] = useState(false);

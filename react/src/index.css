@@ -4,8 +4,8 @@
 @tailwind utilities;
 
 /* fullpage.js 관련 스타일 오버라이드 */
-.fp-section {
-  @apply relative;
-}
+/*.fp-section {*/
+/*  @apply relative;*/
+/*}*/
 
 /* 필요한 경우 추가 fullpage.js 스타일 오버라이드 */

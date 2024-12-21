@@ -14,31 +14,18 @@ function App() {
   useEffect(() => {
     if (window.Pageable) {
       const pages = new window.Pageable("#container", {
-        animation: 500,
+        animation: 600,
         orientation: "vertical",
+        swipeThreshold: 4000,
+        throttle: 3000,
+        delay: 500,
         events: {
           wheel: true,
+          touch: true,
+          mouse: true,
+          keydown: true,
         },
       });
-
-      pages.on("init", (data : any) => {
-        console.log('init', data);
-        const currentPage = document.querySelector('.pg-page.pg-active');
-        if (currentPage?.getAttribute('data-anchor') === 'page-1') {
-          const terminalInput = currentPage.querySelector('input');
-          terminalInput?.focus();
-        }
-      });
-
-      pages.on("scroll.end", (data : any) => {
-        console.log("scroll.end", data);
-        const currentPage = document.querySelector('.pg-page.pg-active');
-        if (currentPage?.getAttribute('data-anchor') === 'page-1') {
-          const terminalInput = currentPage.querySelector('input');
-          terminalInput?.focus();
-        }
-      });
-
       return () => {
         pages.destroy();
       };

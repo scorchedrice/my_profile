@@ -1,4 +1,3 @@
-import { IoTerminalSharp } from "react-icons/io5";
 import TerminalModal from "./modal/TerminalModal.tsx";
 
 export default function Navigator() {
