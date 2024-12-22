@@ -3,6 +3,7 @@ import Frontend from "./Frontend";
 import Backend from "./Backend";
 import TestFramework from "./TestFramework.tsx";
 import Language from "./Language";
+import { MdAutorenew } from "react-icons/md";
 
 export default function Skills() {
   // 현재 보여줄 기술 역량
@@ -44,29 +45,34 @@ export default function Skills() {
 
   return (
     <>
-    <div className="w-[500px] max-w-6xl mx-auto p-6 space-y-6">
-      <div className="flex items-center justify-between">
-        <div className="flex gap-3">
-          {skills.map((skill) => (
-            <button
-              key={skill}
-              onClick={() => setNowActive(skill)}
-              className={`px-4 py-2 rounded-lg transition-colors ${
-                nowActive === skill
-                  ? "bg-blue-500 text-white"
-                  : "bg-gray-100 hover:bg-gray-200 text-gray-700"
-              }`}
-            >
-              {skill}
-            </button>
-          ))}
+      <div className="w-[500px] max-w-6xl mx-auto p-6 space-y-6">
+        <div className="flex items-center justify-between">
+          <div className="flex gap-3">
+            {skills.map((skill) => (
+              <button
+                key={skill}
+                onClick={() => setNowActive(skill)}
+                className={`px-4 py-2 rounded-lg transition-colors ${
+                  nowActive === skill
+                    ? "bg-blue-500 text-white"
+                    : "bg-gray-100 hover:bg-gray-200 text-gray-700"
+                }`}
+              >
+                {skill}
+              </button>
+            ))}
+          </div>
+        </div>
+        <div className="min-h-[400px] bg-white rounded-lg shadow-md p-6">
+          {renderSkillComponent()}
         </div>
       </div>
-      <div className="min-h-[400px] bg-white rounded-lg shadow-md p-6">
-        {renderSkillComponent()}
-      </div>
-    </div>
-      autoplay
+      <button type="button" onClick={() => setAutoPlay(!autoPlay)}>
+        <MdAutorenew
+          className="animate-spin [animation-duration:3s]"
+          style={{ animationPlayState: autoPlay ? 'running' : 'paused' }}
+        />
+      </button>
     </>
   )
 }
