@@ -18,24 +18,26 @@ export default function Skills() {
         </button>
       </div>
       <div className="w-[400px] max-w-[440px] mx-auto p-6 space-y-6">
-        <div className="flex border-b">
-          {skills.map((skill) => (
-            <button
-              key={skill}
-              onClick={() => setNowActive(skill)}
-              className={`w-1/4 py-2 rounded-t-lg transition-colors ${
-                nowActive === skill
-                  ? "bg-blue-500 text-white"
-                  : "bg-gray-100 hover:bg-gray-200 text-gray-700"
-              }`}
-            >
-              {skill}
-            </button>
-          ))}
-        </div>
-        {/* 컨텐츠 영역 */}
-        <div className="min-h-[400px] p-6">
-          {renderSkillComponent(nowActive)}
+        <div className="bg-transparent rounded-lg shadow-md">
+          <div className="flex">
+            {skills.map((skill) => (
+              <button
+                key={skill}
+                onClick={() => setNowActive(skill)}
+                className={`w-1/4 py-2 rounded-t-lg transition-colors ${
+                  nowActive === skill
+                    ? "bg-white text-black"
+                    : "bg-gray-100 hover:bg-gray-200 text-gray-700"
+                }`}
+              >
+                {skill}
+              </button>
+            ))}
+          </div>
+          {/* 컨텐츠 영역 */}
+          <div className="min-h-[400px] p-6 bg-white rounded-b-md">
+            {renderSkillComponent(nowActive)}
+          </div>
         </div>
       </div>
     </>
