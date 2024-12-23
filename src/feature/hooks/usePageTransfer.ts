@@ -38,12 +38,10 @@ export default function usePageTransfer() {
   // 터치 이벤트 처리 함수들
   // 터치 이벤트 핸들러들
   const handleTouchStart = (e: TouchEvent) => {
-    e.preventDefault();
     touchStart.current = e.touches[0].clientY;
   };
 
   const handleTouchMove = (e: TouchEvent) => {
-    e.preventDefault();
     if (touchStart.current !== null) { // 시작점이 있을 때만 이동 기록
       touchMove.current = e.touches[0].clientY;
     }
@@ -74,7 +72,6 @@ export default function usePageTransfer() {
 
   // 마우스 휠 이벤트 처리 함수
   const handleWheel = (e: WheelEvent) => {
-    e.preventDefault();
     if (isScrolling.current) return;
     const direction = e.deltaY > 0 ? 1 : -1;
     scrollToSection(getNextSection(direction));
