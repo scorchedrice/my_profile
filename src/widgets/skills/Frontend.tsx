@@ -1,6 +1,6 @@
 export default function Frontend() {
   return (
-    <div className="flex justify-end h-[140px] gap-8">
+    <div className="flex justify-center h-[140px] gap-8">
       <div className="flex flex-col items-center">
         <div className="w-[80px] h-[80px] hover:animate-bounce">
           <svg fill="#61DAFB" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>React</title>
