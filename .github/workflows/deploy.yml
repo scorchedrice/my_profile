@@ -9,7 +9,7 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout
         uses: actions/checkout@v3
 
       - name: Setup Node.js
@@ -17,12 +17,16 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install and Build 🔧
+      - name: Clean install dependencies
         run: |
-          npm ci
-          npm run build
+          rm -rf node_modules
+          rm -f package-lock.json
+          npm install
 
-      - name: Deploy 🚀
+      - name: Build
+        run: npm run build
+
+      - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist
