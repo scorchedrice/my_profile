@@ -5,7 +5,4 @@ export type TechStackItems = {
   viewBox?: string;
 }
 
-export const skills = ['Language', 'Frontend', 'Backend', 'Testing']
-// export const languageStacks : TechStackItems = {
-//
-// }
+export const skills = ['Language', 'Frontend', 'Backend', 'Testing & Tools']
