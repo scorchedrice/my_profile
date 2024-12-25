@@ -3,6 +3,10 @@ import IntroPage from "./pages/IntroPage.tsx";
 import AboutMePage from "./pages/AboutMePage.tsx";
 import TechStackPage from "./pages/TechStackPage.tsx";
 import Navigator from "./widgets/Navigator.tsx";
+import ArchivePage from "./pages/ArchivePage.tsx";
+import EducationPage from "./pages/EducationPage.tsx";
+import ProjectPage from "./pages/ProjectPage.tsx";
+import FinishPage from "./pages/FinishPage.tsx";
 
 function App() {
   const { scrollYProgress } = useScroll()
@@ -24,6 +28,10 @@ function App() {
       <IntroPage/>
       <AboutMePage/>
       <TechStackPage/>
+      <ArchivePage/>
+      <ProjectPage/>
+      <EducationPage/>
+      {/*<FinishPage/>*/}
     </>
   );
 }

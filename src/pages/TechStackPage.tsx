@@ -39,22 +39,23 @@ export default function TechStackPage() {
   ];
 
   return (
-    <motion.div className="h-[100dvh] bg-amber-300 flex flex-col justify-center items-center" id="Skills">
+    <motion.div className="h-[100dvh] bg-amber-300 flex flex-col items-center" id="Skills">
+      <h1 className="text-[50px] font-bold text-gray-700 ml-8">SKILLS</h1>
       <motion.div
         className="m-2"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
+        viewport={{once: true}}
       >
-        {sections.map(({ name, data }) => (
+        {sections.map(({name, data}) => (
           <motion.div
             key={name}
             className="my-3"
             variants={sectionVariants}
           >
             <span className="text-gray-700 font-bold text-[24px]">{name}</span>
-            <Skill skillList={data} />
+            <Skill skillList={data}/>
           </motion.div>
         ))}
       </motion.div>

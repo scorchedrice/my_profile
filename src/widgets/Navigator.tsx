@@ -88,6 +88,39 @@ export default function Navigator() {
         <motion.li
           variants={itemVariants}
           className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-gray-700 text-sm"
+          onClick={() => {
+            document.getElementById("Archive")?.scrollIntoView({behavior: 'smooth'})
+            setIsOpen(false)
+          }
+          }
+        >
+          Archive
+        </motion.li>
+        <motion.li
+          variants={itemVariants}
+          className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-gray-700 text-sm"
+          onClick={() => {
+            document.getElementById("Projects")?.scrollIntoView({behavior: 'smooth'})
+            setIsOpen(false)
+          }
+          }
+        >
+          Projects
+        </motion.li>
+        <motion.li
+          variants={itemVariants}
+          className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-gray-700 text-sm"
+          onClick={() => {
+            document.getElementById("Education")?.scrollIntoView({behavior: 'smooth'})
+            setIsOpen(false)
+          }
+          }
+        >
+          Education
+        </motion.li>
+        <motion.li
+          variants={itemVariants}
+          className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-gray-700 text-sm"
         >
           <TerminalModal/>
         </motion.li>
