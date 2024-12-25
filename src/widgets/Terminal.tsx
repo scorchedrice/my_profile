@@ -12,9 +12,22 @@ export default function Terminal() {
 
   const inputRef = useRef<HTMLInputElement>(null);
 
+  // autofocus가 동작하게 하지만 확대는 하지 않도록 (모바일 친화성)
   useEffect(() => {
-    inputRef.current?.focus()
-  })
+    if (inputRef.current) {
+      inputRef.current.focus()
+    }
+      const meta = document.createElement("meta");
+      meta.name = "viewport";
+      meta.content = "width=device-width, initial-scale=1.0";
+      document.head.appendChild(meta);
+
+      return () => {
+        document.head.removeChild(meta);
+      }
+  }
+
+  )
 
   return (
     <div className="max-w-2xl mx-auto bg-[#2d2d2d] rounded-lg shadow-2xl overflow-hidden">

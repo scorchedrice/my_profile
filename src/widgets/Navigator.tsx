@@ -24,9 +24,9 @@ export default function Navigator() {
         onClick={() => setIsOpen(!isOpen)}
         animate={{ rotate: isOpen ? -225 : 0 }}
         transition={{ duration: 0.3 }}
-        className="flex items-center justify-center p-2 hover:text-blue-500 transition-colors"
+        className="flex items-center justify-center p-2 hover:text-blue-500"
       >
-        <IoIosNavigate className="w-[40px] h-[40px]" />
+        <IoIosNavigate className="w-[40px] h-[40px] stroke-white stroke-2" />
       </motion.button>
 
       <motion.ul
