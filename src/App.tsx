@@ -22,8 +22,8 @@ function App() {
         }}
       />
       <IntroPage/>
-      <TechStackPage/>
       <AboutMePage/>
+      <TechStackPage/>
     </>
   );
 }

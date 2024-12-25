@@ -3,12 +3,13 @@ import { motion } from "framer-motion";
 type SkillItem = {
   name: string;
   Url: string;
+  description?: string;
 }
 
 type SkillProps = {
   skillList: SkillItem[];
 }
-// 추후 클릭하면 모달이 작동하는 로직 구현할 것.
+
 export default function Skill({ skillList }: SkillProps) {  // 수정: 구조 분해 할당으로 skillList를 받음
   return (
     <div className="flex flex-wrap">
@@ -26,7 +27,7 @@ export default function Skill({ skillList }: SkillProps) {  // 수정: 구조 �
             />
           </div>
 
-          {/* 툴팁 */}
+          {/*툴팁*/}
           <motion.div
             className="absolute -bottom-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-black text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap"
           >
