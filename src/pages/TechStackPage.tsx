@@ -39,7 +39,7 @@ export default function TechStackPage() {
   ];
 
   return (
-    <motion.div className="h-[100dvh] bg-amber-300 flex flex-col justify-center items-center">
+    <motion.div className="h-[100dvh] bg-amber-300 flex flex-col justify-center items-center" id="Skills">
       <motion.div
         className="m-2"
         variants={containerVariants}

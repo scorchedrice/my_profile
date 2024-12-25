@@ -1,25 +1,86 @@
+import { motion } from 'framer-motion';
+import { useState } from "react";
+import { IoIosNavigate } from "react-icons/io";
 import TerminalModal from "./modal/TerminalModal.tsx";
 
 export default function Navigator() {
+  const itemVariants = {
+    open: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 300, damping: 24 }
+    },
+    closed: { opacity: 0, y: 20, transition: { duration: 0.2 } }
+  };
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-sm z-50 shadow-sm">
-      <div className="max-w-screen-xl mx-auto px-4">
-        <div className="flex justify-center items-center h-16 gap-8">
-          <a href="#intro" className="hover:text-blue-500 transition-colors">
-            Intro
-          </a>
-          <a href="#tech-stack" className="hover:text-blue-500 transition-colors">
-            Tech Stack
-          </a>
-          <a href="#projects" className="hover:text-blue-500 transition-colors">
-            Projects
-          </a>
-          <a href="#etc" className="hover:text-blue-500 transition-colors">
-            Etc
-          </a>
+    <motion.nav
+      initial={false}
+      animate={isOpen ? "open" : "closed"}
+      className="fixed top-4 right-0 z-50 flex flex-col items-end px-4"
+    >
+      <motion.button
+        onClick={() => setIsOpen(!isOpen)}
+        animate={{ rotate: isOpen ? -225 : 0 }}
+        transition={{ duration: 0.3 }}
+        className="flex items-center justify-center p-2 hover:text-blue-500 transition-colors"
+      >
+        <IoIosNavigate className="w-[40px] h-[40px]" />
+      </motion.button>
+
+      <motion.ul
+        variants={{
+          open: {
+            clipPath: "inset(0% 0% 0% 0% round 10px)",
+            transition: {
+              type: "spring",
+              bounce: 0,
+              duration: 0.7,
+              delayChildren: 0.3,
+              staggerChildren: 0.05
+            }
+          },
+          closed: {
+            clipPath: "inset(10% 50% 90% 50% round 10px)",
+            transition: {
+              type: "spring",
+              bounce: 0,
+              duration: 0.3
+            }
+          }
+        }}
+        style={{pointerEvents: isOpen ? "auto" : "none"}}
+        className="mt-2 w-48 bg-white rounded-lg shadow-xl py-2"
+      >
+        <motion.li
+          variants={itemVariants}
+          className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-gray-700 text-sm"
+          onClick={() => {
+            document.getElementById("Intro")?.scrollIntoView({behavior: 'smooth'})
+            setIsOpen(false)
+          }}
+        >
+          Intro
+        </motion.li>
+        <motion.li
+          variants={itemVariants}
+          className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-gray-700 text-sm"
+          onClick={() => {
+            document.getElementById("Skills")?.scrollIntoView({behavior: 'smooth'})
+            setIsOpen(false)
+          }
+        }
+        >
+          Skills
+        </motion.li>
+        <motion.li
+          variants={itemVariants}
+          className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-gray-700 text-sm"
+        >
           <TerminalModal/>
-        </div>
-      </div>
-    </nav>
-  )
+        </motion.li>
+      </motion.ul>
+    </motion.nav>
+  );
 }
