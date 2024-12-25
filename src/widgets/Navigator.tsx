@@ -67,10 +67,21 @@ export default function Navigator() {
           variants={itemVariants}
           className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-gray-700 text-sm"
           onClick={() => {
+            document.getElementById("AboutMe")?.scrollIntoView({behavior: 'smooth'})
+            setIsOpen(false)
+          }
+          }
+        >
+          AboutMe
+        </motion.li>
+        <motion.li
+          variants={itemVariants}
+          className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-gray-700 text-sm"
+          onClick={() => {
             document.getElementById("Skills")?.scrollIntoView({behavior: 'smooth'})
             setIsOpen(false)
           }
-        }
+          }
         >
           Skills
         </motion.li>
