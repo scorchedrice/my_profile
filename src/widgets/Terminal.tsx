@@ -73,7 +73,7 @@ export default function Terminal() {
             value={currentCommand}
             onChange={(e) => setCurrentCommand(e.target.value)}
             onKeyUp={handleKeyPress}
-            className="flex-1 ml-2 bg-transparent outline-none text-green-400"
+            className="flex-1 ml-2 bg-transparent outline-none text-green-400 text-base"
             autoFocus
           />
         </div>
