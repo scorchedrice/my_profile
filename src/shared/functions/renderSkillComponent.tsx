@@ -2,7 +2,7 @@
 import Backend from "../../widgets/skills/Backend.tsx";
 import TestFramework from "../../widgets/skills/TestFramework.tsx";
 import Language from "../../widgets/skills/Language.tsx";
-import Skill from "../../widgets/skills/Skill.tsx";
+import Skill from "../../widgets/Skill.tsx";
 import { techStackData } from "../../assets/skills/techStack.ts"
 
 export default function renderSkillComponent(nowActive : string) {

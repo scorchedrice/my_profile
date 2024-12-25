@@ -1,11 +1,9 @@
-import WallPaper from "../assets/wallpaper.jpg"
+import { motion } from "framer-motion"
 
 export default function IntroPage() {
   return (
-    <div className="relative w-screen h-screen overflow-hidden">
-      <div className="absolute inset-0">
-        <img src={WallPaper} alt="wallPaper" className="w-full h-full object-cover" />
-      </div>
-    </div>
+    <motion.div className="h-[200dvh] bg-amber-500">
+        This is Intro Page.
+    </motion.div>
   )
 }
