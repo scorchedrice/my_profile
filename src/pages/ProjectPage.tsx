@@ -1,7 +1,7 @@
 export default function ProjectPage() {
   return(
-    <div>
-      여기엔 프로젝트 목록들을 넣을거에요.
+    <div id="Projects" className="h-[300dvh] bg-blue-400 flex flex-col items-center">
+      <h1 className="text-[50px] font-bold text-gray-700 ml-8">PROJECTS</h1>
     </div>
   )
 }
