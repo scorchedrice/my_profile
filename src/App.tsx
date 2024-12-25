@@ -2,13 +2,13 @@ import { useScroll, motion } from "framer-motion"
 import IntroPage from "./pages/IntroPage.tsx";
 import AboutMePage from "./pages/AboutMePage.tsx";
 import TechStackPage from "./pages/TechStackPage.tsx";
-import TerminalModal from "./widgets/modal/TerminalModal.tsx";
+import Navigator from "./widgets/Navigator.tsx";
 
 function App() {
   const { scrollYProgress } = useScroll()
   return (
     <>
-      <TerminalModal/>
+      <Navigator/>
       <motion.div
         style={{
           position: "fixed",

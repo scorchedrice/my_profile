@@ -36,8 +36,13 @@ export default function TerminalModal() {
 
   return (
     <>
-      <button type="button" onClick={modalIsOpen ? closeModal : openModal}>
-        <IoTerminalSharp className="hover:text-blue-500 transition-colors w-[20px] h-[20px]" />
+      <button
+        type="button"
+        onClick={modalIsOpen ? closeModal : openModal}
+        className="w-full flex items-center gap-2 hover:text-blue-500 transition-colors"
+      >
+        <IoTerminalSharp className="w-[20px] h-[20px]"/>
+        <span>Terminal</span> {/* 텍스트 추가 */}
       </button>
       <Modal
         isOpen={modalIsOpen}
