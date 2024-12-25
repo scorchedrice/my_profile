@@ -6,7 +6,7 @@ import Navigator from "./widgets/Navigator.tsx";
 import ArchivePage from "./pages/ArchivePage.tsx";
 import EducationPage from "./pages/EducationPage.tsx";
 import ProjectPage from "./pages/ProjectPage.tsx";
-import FinishPage from "./pages/FinishPage.tsx";
+// import FinishPage from "./pages/FinishPage.tsx";
 
 function App() {
   const { scrollYProgress } = useScroll()

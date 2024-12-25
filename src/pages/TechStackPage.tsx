@@ -39,7 +39,7 @@ export default function TechStackPage() {
   ];
 
   return (
-    <motion.div className="h-[100dvh] bg-amber-300 flex flex-col items-center" id="Skills">
+    <motion.div className="h-[100%] bg-amber-300 flex flex-col items-center" id="Skills">
       <h1 className="text-[50px] font-bold text-gray-700 ml-8">SKILLS</h1>
       <motion.div
         className="m-2"
