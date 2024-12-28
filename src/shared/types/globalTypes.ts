@@ -1,2 +1,35 @@
-// 이곳엔 페이지의 전환 등 전체적인 틀을 담당하는 타입들이 들어갑니다.
-
+export interface ProjectDetailType {
+  id: number;
+  overview: {
+    title: string;
+    period: string;
+    github: string;
+    demo: string;
+    teamMembers: number;
+    role: string;
+    mainImg: string;
+  };
+  description: {
+    summary: string;
+    motivation: string;
+    mainFeatures: Array<{
+      title: string;
+      content: string;
+    }>;
+    techStack: {
+      frontend: string[];
+      deployment: string[];
+      tools: string[];
+    };
+    challenges: Array<{
+      problem: string;
+      solution: string;
+      solutionSummary: string;
+    }>;
+    achievement: string[];
+  };
+  images: Array<{
+    url: string;
+    caption: string;
+  }>;
+}

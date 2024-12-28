@@ -1,8 +1,8 @@
 import {motion} from "framer-motion"
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import { useEffect, useRef } from 'react';
-import { text1Opacity, text2Opacity, text3Opacity, bgOpacity } from "../feature/animation/opacity.ts";
 import { isMobile } from "../shared/isMobile.ts"
+import useScrollAnimations from "../feature/animation/opacity.ts";
 
 export default function IntroPage() {
   const vhRef = useRef(0);
@@ -21,6 +21,8 @@ export default function IntroPage() {
     window.addEventListener('resize', setVh);
     return () => window.removeEventListener('resize', setVh);
   }, []);
+
+  const { text1Opacity, text2Opacity, text3Opacity, bgOpacity } = useScrollAnimations()
 
   const scrollTextAnimation = {
     y: [0, -20, 0],
