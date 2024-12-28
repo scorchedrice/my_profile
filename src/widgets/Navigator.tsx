@@ -1,130 +1,81 @@
 import { motion } from 'framer-motion';
-import { useState } from "react";
-import { IoIosNavigate } from "react-icons/io";
-import TerminalModal from "./modal/TerminalModal.tsx";
+import { useState } from 'react';
+import { IoMenu, IoClose } from "react-icons/io5";
 
 export default function Navigator() {
-  const itemVariants = {
-    open: {
-      opacity: 1,
-      y: 0,
-      transition: { type: "spring", stiffness: 300, damping: 24 }
-    },
-    closed: { opacity: 0, y: 20, transition: { duration: 0.2 } }
-  };
   const [isOpen, setIsOpen] = useState(false);
 
-  return (
-    <motion.nav
-      initial={false}
-      animate={isOpen ? "open" : "closed"}
-      className="fixed top-4 right-0 z-50 flex flex-col items-end px-4"
-    >
-      <motion.button
-        onClick={() => setIsOpen(!isOpen)}
-        animate={{ rotate: isOpen ? -225 : 0 }}
-        transition={{ duration: 0.3 }}
-        className="flex items-center justify-center p-2 hover:text-blue-500"
-      >
-        <IoIosNavigate className="w-[40px] h-[40px] stroke-white stroke-2" />
-      </motion.button>
+  const menuItems = [
+    "AboutMe",
+    "Skills",
+    "Archive",
+    "Projects",
+    "Education"
+  ];
 
-      <motion.ul
-        variants={{
-          open: {
-            clipPath: "inset(0% 0% 0% 0% round 10px)",
-            transition: {
-              type: "spring",
-              bounce: 0,
-              duration: 0.7,
-              delayChildren: 0.3,
-              staggerChildren: 0.05
-            }
-          },
-          closed: {
-            clipPath: "inset(10% 50% 90% 50% round 10px)",
-            transition: {
-              type: "spring",
-              bounce: 0,
-              duration: 0.3
-            }
-          }
-        }}
-        style={{pointerEvents: isOpen ? "auto" : "none"}}
-        className="mt-2 w-48 bg-white rounded-lg shadow-xl py-2"
-      >
-        <motion.li
-          variants={itemVariants}
-          className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-gray-700 text-sm"
-          onClick={() => {
-            document.getElementById("Intro")?.scrollIntoView({behavior: 'smooth'})
-            setIsOpen(false)
+  function scrollToSection(id: string) {
+    const element = document.getElementById(id);
+    const navHeight = 50;
+    if (element) {
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - navHeight;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+      setIsOpen(false); // 메뉴 클릭 시 드롭다운 닫기
+    }
+  }
+
+  return (
+    <motion.nav className="fixed top-0 left-0 right-0 z-50 h-[50px] bg-white/95 shadow-md w-[100dvw]">
+      <div className="hidden md:block h-full max-w-4xl mx-auto px-2">
+        <ul className="flex justify-center items-center h-full gap-2">
+          {menuItems.map((item) => (
+            <li
+              key={item}
+              className="px-2 py-1.5 hover:bg-gray-100 rounded-md cursor-pointer text-gray-700 text-sm transition-colors"
+              onClick={() => scrollToSection(item)}
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="md:hidden px-4">
+        <div className="flex justify-between items-center h-[50px]">
+          <span className="font-medium">한지웅's 포트폴리오</span>
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="p-2"
+          >
+            {isOpen ? <IoClose size={24} /> : <IoMenu size={24} />}
+          </button>
+        </div>
+
+        {/* 드롭다운 메뉴 */}
+        <motion.div
+          initial={false}
+          animate={{
+            height: isOpen ? 'auto' : 0,
+            opacity: isOpen ? 1 : 0
           }}
+          className="overflow-hidden bg-white shadow-lg"
         >
-          Intro
-        </motion.li>
-        <motion.li
-          variants={itemVariants}
-          className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-gray-700 text-sm"
-          onClick={() => {
-            document.getElementById("AboutMe")?.scrollIntoView({behavior: 'smooth'})
-            setIsOpen(false)
-          }
-          }
-        >
-          AboutMe
-        </motion.li>
-        <motion.li
-          variants={itemVariants}
-          className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-gray-700 text-sm"
-          onClick={() => {
-            document.getElementById("Skills")?.scrollIntoView({behavior: 'smooth'})
-            setIsOpen(false)
-          }
-          }
-        >
-          Skills
-        </motion.li>
-        <motion.li
-          variants={itemVariants}
-          className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-gray-700 text-sm"
-          onClick={() => {
-            document.getElementById("Archive")?.scrollIntoView({behavior: 'smooth'})
-            setIsOpen(false)
-          }
-          }
-        >
-          Archive
-        </motion.li>
-        <motion.li
-          variants={itemVariants}
-          className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-gray-700 text-sm"
-          onClick={() => {
-            document.getElementById("Projects")?.scrollIntoView({behavior: 'smooth'})
-            setIsOpen(false)
-          }
-          }
-        >
-          Projects
-        </motion.li>
-        <motion.li
-          variants={itemVariants}
-          className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-gray-700 text-sm"
-          onClick={() => {
-            document.getElementById("Education")?.scrollIntoView({behavior: 'smooth'})
-            setIsOpen(false)
-          }
-          }
-        >
-          Education
-        </motion.li>
-        <motion.li
-          variants={itemVariants}
-          className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-gray-700 text-sm"
-        >
-          <TerminalModal/>
-        </motion.li>
-      </motion.ul>
+          <ul className="py-2">
+            {menuItems.map((item) => (
+              <li
+                key={item}
+                className="px-4 py-3 hover:bg-gray-100 cursor-pointer text-gray-700 text-sm transition-colors"
+                onClick={() => scrollToSection(item)}
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </motion.div>
+      </div>
     </motion.nav>
   );
 }
