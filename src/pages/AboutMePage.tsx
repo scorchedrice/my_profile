@@ -1,37 +1,11 @@
 import { motion, AnimatePresence } from "framer-motion"
 import Profile from "../assets/profile.jpg";
 import { BsCopy } from "react-icons/bs";
-import {useState} from "react";
+import {profilePictureVariants, profileTextVariant} from "../feature/animation/variants.ts";
+import useAboutMe from "../feature/hooks/useAboutMe.ts";
 
 export default function AboutMePage() {
-
-  const profileVariants = {
-    initial: { scale: 0.8, opacity: 0 },
-    animate: {
-      scale: 1,
-      opacity: 1,
-      transition: { duration: 0.5 }
-    }
-  }
-  const fadeIn = {
-    initial: { opacity: 0, y: 20 },
-    animate: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-    }
-  }
-
-  // 복사 함수
-  const [showTooltip, setShowTooltip] = useState(false);
-  const [mousePosition, setMousePosition] = useState({x:0, y:0});
-
-  const copyMail = (e: React.MouseEvent) => {
-    setMousePosition({ x: e.clientX, y: e.clientY });
-    navigator.clipboard.writeText("wldnd2977@gmail.com");
-    setShowTooltip(true);
-    setTimeout(() => setShowTooltip(false), 1000);
-  };
+  const { showTooltip, mousePosition, copyMail } = useAboutMe()
 
   return (
     <div className="bg-amber-500 flex flex-col" id="AboutMe">
@@ -42,7 +16,7 @@ export default function AboutMePage() {
             <motion.div
               className="w-40 h-40 rounded-full overflow-hidden"
               initial="initial"
-              variants={profileVariants}
+              variants={profilePictureVariants}
               whileInView="animate"
               viewport={{once: true}}
             >
@@ -52,7 +26,7 @@ export default function AboutMePage() {
           <motion.div
             className="w-full md:w-1/2"
             initial="initial"
-            variants={fadeIn}
+            variants={profileTextVariant}
             whileInView="animate"
             viewport={{once: true}}
           >

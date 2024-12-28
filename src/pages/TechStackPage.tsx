@@ -1,36 +1,9 @@
 import { motion } from "framer-motion";
 import Skill from "../widgets/Skill"
 import { techStackData } from "../assets/skills/techStack.ts";
+import { containerVariants, sectionVariants } from "../feature/animation/variants.ts";
 
 export default function TechStackPage() {
-  // 컨테이너 애니메이션 설정
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.4 // 자식 요소들 사이의 등장 간격
-      }
-    }
-  };
-
-  // 각 섹션의 애니메이션 설정
-  const sectionVariants = {
-    hidden: {
-      opacity: 0,
-      x: 50  // 아래에서 위로 올라오는 효과
-    },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        type: "spring",
-        stiffness: 400,
-        damping: 30
-      }
-    }
-  };
-
   const sections = [
     { name: "Language", data: techStackData.language },
     { name: "Frontend", data: techStackData.frontend },
