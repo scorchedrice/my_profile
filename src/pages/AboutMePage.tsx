@@ -4,6 +4,7 @@ import { BsCopy } from "react-icons/bs";
 import {useState} from "react";
 
 export default function AboutMePage() {
+
   const profileVariants = {
     initial: { scale: 0.8, opacity: 0 },
     animate: {
@@ -33,7 +34,7 @@ export default function AboutMePage() {
   };
 
   return (
-    <div className="h-[100%] bg-amber-500 flex flex-col" id="AboutMe">
+    <div className="bg-amber-500 flex flex-col" id="AboutMe">
       <div className="max-w-5xl mx-auto w-full">
         <h1 className="text-[50px] font-bold text-gray-700 text-center">ABOUT ME</h1>
         <motion.div className="flex flex-col md:flex-row items-center p-4">

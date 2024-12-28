@@ -5,8 +5,9 @@ import JanyangMain from "../../assets/project/janyang/janyang_main.png"
 export default function ProjectWrapper() {
   // 프로젝트 데이터 배열로 관리
   const projects = [
-    { id: 1, title: "바로바로", description: "여기엔 설명이 들어갑니다.", img: baroMain, skill: ['next.js', 'zustand', 'typeScript'] },
-    { id: 2, title: "자냥", description: "여기엔 설명이 들어갑니다.", img: JanyangMain, skill: ['flutter', 'dart']},
+    { id: 1, title: "포트폴리오 페이지", description: "Intro를 개발 완료하고 수정완료합니다.", img: baroMain, skill: ['react', 'typeScript'] },
+    { id: 2, title: "바로바로", description: "여기엔 설명이 들어갑니다.", img: baroMain, skill: ['next.js', 'zustand', 'typeScript'] },
+    { id: 3, title: "자냥", description: "여기엔 설명이 들어갑니다.", img: JanyangMain, skill: ['flutter', 'dart']},
   ];
 
   return (
@@ -17,7 +18,9 @@ export default function ProjectWrapper() {
             key={project.id}
             className="bg-white w-full max-w-[600px] h-[300px] rounded-lg cursor-pointer
                      shadow-md hover:shadow-xl transition-shadow"
-            whileHover={{scale: 1.02}}
+            whileHover={{
+              scale: 1.02,
+            }}
             // onClick으로 모달 띄우기
           >
             <div className="flex flex-col sm:flex-row h-full">
@@ -29,12 +32,15 @@ export default function ProjectWrapper() {
                 <p>{project.description}</p>
               </div>
             </div>
-            <div className="absolute inset-0 bg-black/50 opacity-0 hover:opacity-100
-                          transition-opacity duration-300 rounded-lg
-                          flex items-center justify-center">
-              <span className="text-white text-lg font-semibold">자세히 보기</span>
-            </div>
+            {/*<motion.div*/}
+            {/*  className="absolute inset-0 flex items-center justify-center bg-black/50 rounded-lg"*/}
+            {/*  initial={{opacity: 0}}*/}
+            {/*  whileHover={{opacity: 1}}*/}
+            {/*>*/}
+            {/*  <span className="text-white text-lg font-semibold">자세히 보기</span>*/}
+            {/*</motion.div>*/}
           </motion.div>
+
         ))}
       </div>
     </div>

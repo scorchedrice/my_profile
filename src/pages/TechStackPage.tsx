@@ -39,10 +39,10 @@ export default function TechStackPage() {
   ];
 
   return (
-    <motion.div className="h-[100%] bg-amber-300 flex flex-col items-center" id="Skills">
-      <h1 className="text-[50px] font-bold text-gray-700 ml-8">SKILLS</h1>
+    <motion.div className="bg-amber-300 flex flex-col items-center" id="Skills">
+      <h1 className="text-[50px] font-bold text-gray-700">SKILLS</h1>
       <motion.div
-        className="m-2"
+        className="m-4"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -51,7 +51,7 @@ export default function TechStackPage() {
         {sections.map(({name, data}) => (
           <motion.div
             key={name}
-            className="my-3"
+            className="my-8"
             variants={sectionVariants}
           >
             <span className="text-gray-700 font-bold text-[24px]">{name}</span>
