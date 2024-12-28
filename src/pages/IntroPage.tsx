@@ -1,8 +1,8 @@
-import {motion, useScroll, useTransform} from "framer-motion"
+import {motion} from "framer-motion"
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import { useEffect, useRef } from 'react';
-
-const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+import { text1Opacity, text2Opacity, text3Opacity, bgOpacity } from "../feature/animation/opacity.ts";
+import { isMobile } from "../shared/isMobile.ts"
 
 export default function IntroPage() {
   const vhRef = useRef(0);
@@ -16,10 +16,8 @@ export default function IntroPage() {
       }
     };
 
-    // 초기 설정
     setVh();
 
-    // 리사이즈 이벤트에도 대응
     window.addEventListener('resize', setVh);
     return () => window.removeEventListener('resize', setVh);
   }, []);
@@ -32,12 +30,6 @@ export default function IntroPage() {
       ease: "easeInOut",
     }
   }
-
-  const { scrollYProgress } = useScroll();
-  const text1Opacity = useTransform(scrollYProgress, [0, 0.1, 0.15], [1, 1, 0]);
-  const text2Opacity = useTransform(scrollYProgress, [0.15, 0.2, 0.25, 0.3], [0, 1, 1, 0]);
-  const text3Opacity = useTransform(scrollYProgress, [0.3, 0.35, 0.4, 0.45], [0, 1, 1, 0]);
-  const bgOpacity = useTransform(scrollYProgress, [0, 0.9, 1], [1, 1, 0]);
 
   return (
     <div

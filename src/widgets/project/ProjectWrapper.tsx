@@ -1,47 +1,89 @@
-import { motion } from "framer-motion";
-import baroMain from "../../assets/project/barobaro/baro_main.png"
-import JanyangMain from "../../assets/project/janyang/janyang_main.png"
+import {AnimatePresence, motion} from "framer-motion";
+import ProjectSkills from "./ProjectSkills.tsx";
+import { CgReadme } from "react-icons/cg";
+import useProjectFilter from "../../feature/hooks/useProjectFilter.ts";
+
 
 export default function ProjectWrapper() {
-  // 프로젝트 데이터 배열로 관리
-  const projects = [
-    { id: 1, title: "포트폴리오 페이지", description: "Intro를 개발 완료하고 수정완료합니다.", img: baroMain, skill: ['react', 'typeScript'] },
-    { id: 2, title: "바로바로", description: "여기엔 설명이 들어갑니다.", img: baroMain, skill: ['next.js', 'zustand', 'typeScript'] },
-    { id: 3, title: "자냥", description: "여기엔 설명이 들어갑니다.", img: JanyangMain, skill: ['flutter', 'dart']},
-  ];
+  const {
+    setProjectType,
+    getButtonStyle,
+    filteredProjects
+  } = useProjectFilter()
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 justify-items-center">
-        {projects.map((project) => (
-          <motion.div
-            key={project.id}
-            className="bg-white w-full max-w-[600px] h-[300px] rounded-lg cursor-pointer
-                     shadow-md hover:shadow-xl transition-shadow"
-            whileHover={{
-              scale: 1.02,
-            }}
-            // onClick으로 모달 띄우기
-          >
-            <div className="flex flex-col sm:flex-row h-full">
-              <div className="w-full sm:w-[200px] h-[200px] sm:h-full rounded-t-lg sm:rounded-l-lg sm:rounded-tr-none">
-                <img src={project.img} alt={`${project.title} thumbnail`} className="w-full h-full object-contain"/>
-              </div>
-              <div className="p-4 flex-1">
-                <h2 className="text-xl font-bold mb-2">{project.title}</h2>
-                <p>{project.description}</p>
-              </div>
-            </div>
-            {/*<motion.div*/}
-            {/*  className="absolute inset-0 flex items-center justify-center bg-black/50 rounded-lg"*/}
-            {/*  initial={{opacity: 0}}*/}
-            {/*  whileHover={{opacity: 1}}*/}
-            {/*>*/}
-            {/*  <span className="text-white text-lg font-semibold">자세히 보기</span>*/}
-            {/*</motion.div>*/}
-          </motion.div>
+      <div className="flex flex-col lg:flex-row gap-8">
+        {/*필터*/}
+        <div className="w-full lg:w-64 bg-white rounded-lg shadow-md p-4 h-fit">
+          <div className="space-y-2">
+            <button
+              className={getButtonStyle("all")}
+              onClick={() => setProjectType("all")}
+            >
+              All
+            </button>
+            <button
+              className={getButtonStyle("team")}
+              onClick={() => setProjectType("team")}
+            >
+              Team
+            </button>
+            <button
+              className={getButtonStyle("personal")}
+              onClick={() => setProjectType("personal")}
+            >
+              Personal
+            </button>
+          </div>
+        </div>
 
-        ))}
+        {/*프로젝트 목록*/}
+        <div className="flex-1">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 justify-items-center">
+            <AnimatePresence mode="wait">
+              {filteredProjects.map((project) => (
+                <motion.div
+                  key={project.id}
+                  layout
+                  initial={{opacity: 0, y: 20}}
+                  animate={{opacity: 1, y: 0}}
+                  exit={{opacity: 0, y: -20}}
+                  transition={{duration: 0.3}}
+                  className="bg-white w-full max-w-[400px] rounded-lg cursor-pointer
+                           shadow-md hover:shadow-xl transition-shadow"
+                  whileHover={{
+                    scale: 1.02,
+                    transition: {duration: 0.2},
+                  }}
+                >
+                  <div className="h-[200px] w-full rounded-t-lg overflow-hidden">
+                    <img
+                      src={project.img}
+                      alt={`${project.title} thumbnail`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+
+                  <div className="p-6 flex flex-col">
+                    <div className="flex items-center gap-2">
+                      <h2 className="text-xl font-bold">{project.title}</h2>
+                      <button
+                        type="button"
+                        className="flex items-center gap-1 px-2 text-sm border border-gray-700 rounded-[4px] hover:bg-gray-100 transition-colors"
+                      >
+                        <CgReadme/>
+                        README
+                      </button>
+                    </div>
+                    <p className="mb-4">{project.description}</p>
+                    <ProjectSkills skills={project.skill}/>
+                  </div>
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </div>
+        </div>
       </div>
     </div>
   );
