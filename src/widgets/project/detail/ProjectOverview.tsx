@@ -24,12 +24,20 @@ export default function ProjectOverview({ overview } : OverviewProps ) {
         </div>
       </div>
       <div className="absolute top-0 right-1 flex flex-col text-[40px]">
-        <button type="button" className="my-2" onClick={() => window.open(github, '_blank')}>
-          <FaGithub/>
-        </button>
-        <button type="button" className="my-2" onClick={() => window.open(demo, '_blank')}>
-          <FaLink/>
-        </button>
+        {github !== "" && (
+          <button
+            type="button"
+            className="my-2"
+            onClick={() => window.open(github, '_blank')}
+          >
+            <FaGithub/>
+          </button>
+        )}
+        {demo !== "" && (
+          <button type="button" className="my-2" onClick={() => window.open(demo, '_blank')}>
+            <FaLink/>
+          </button>
+        )}
       </div>
     </div>
   )
