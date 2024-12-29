@@ -17,9 +17,10 @@ export interface ProjectDetailType {
       content: string;
     }>;
     techStack: {
-      frontend: string[];
-      deployment: string[];
-      tools: string[];
+      frontend?: string[];
+      backend?: string[];
+      deployment?: string[];
+      tools?: string[];
     };
     challenges: Array<{
       problem: string;
