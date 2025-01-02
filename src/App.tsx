@@ -6,6 +6,9 @@ import ArchivePage from "./pages/ArchivePage.tsx";
 import EducationPage from "./pages/EducationPage.tsx";
 import ProjectPage from "./pages/ProjectPage.tsx";
 // import FinishPage from "./pages/FinishPage.tsx";
+import Modal from "react-modal";
+
+Modal.setAppElement('#root');
 
 function App() {
   return (

@@ -14,7 +14,7 @@ export default function ProjectDescription({ description }: DescriptionProps) {
       <br/>
       <div className="w-[80%]">
         {/*프로젝트의 핵심 기능*/}
-        <h2 className="text-[30px] font-bold">💡핵심기능</h2>
+        <h2 className="text-[30px] font-bold">💡 핵심기능</h2>
         <ul className="m-5 space-y-4">
           {description.mainFeatures.map((feature, index) => (
             <li key={index} className="flex flex-col gap-2">
@@ -25,7 +25,7 @@ export default function ProjectDescription({ description }: DescriptionProps) {
         </ul>
         <br/>
         {/*기술 스택*/}
-        <h2 className="text-[30px] font-bold">🪄사용한 기술</h2>
+        <h2 className="text-[30px] font-bold">🪄 사용한 기술</h2>
         <div className="m-5 space-y-4">
           {Object.entries(description.techStack).map(([category, technologies]) => (
             <div key={category} className="flex flex-col gap-2">
@@ -47,7 +47,7 @@ export default function ProjectDescription({ description }: DescriptionProps) {
         </div>
         {/*트러블슈팅*/}
         <br/>
-        <h2 className="text-[30px] font-bold">🛠️트러블 슈팅</h2>
+        <h2 className="text-[30px] font-bold">🛠️ 트러블 슈팅</h2>
         <div className="m-5 space-y-4">
           {description.challenges.map((feature, index) => (
             <div key={index} className="flex flex-col gap-2">
@@ -59,7 +59,7 @@ export default function ProjectDescription({ description }: DescriptionProps) {
         </div>
         {/* 성과 */}
         <br/>
-        <h2 className="text-[30px] font-bold">🎯성과</h2>
+        <h2 className="text-[30px] font-bold">🎯 성과</h2>
         <div className="m-5 space-y-4">
           {description.achievement.map((feature, index) => (
             <div key={index} className="flex flex-col gap-2">
