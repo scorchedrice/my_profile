@@ -14,7 +14,7 @@ export default function AboutMePage() {
         <motion.div className="flex flex-col md:flex-row items-center p-4">
           <div className="w-full md:w-1/2 flex justify-center items-center mb-8 md:mb-0">
             <motion.div
-              className="w-40 h-40 rounded-full overflow-hidden"
+              className="w-[250px] h-[250px] rounded-full overflow-hidden"
               initial="initial"
               variants={profilePictureVariants}
               whileInView="animate"
@@ -31,16 +31,16 @@ export default function AboutMePage() {
             viewport={{once: true}}
           >
             <motion.div className="m-8">
-              <h1 className="font-bold text-gray-700 text-lg">이름</h1>
-              <p>한지웅</p>
+              <h1 className="font-bold text-gray-700 text-xl">이름</h1>
+              <p className="my-3">한지웅</p>
             </motion.div>
             <motion.div className="m-8">
-              <h1 className="font-bold text-gray-700 text-lg">생년월일</h1>
-              <p>1998.01.30</p>
+              <h1 className="font-bold text-gray-700 text-xl">생년월일</h1>
+              <p className="my-3">1998.01.30</p>
             </motion.div>
             <motion.div className="m-8">
-              <h1 className="font-bold text-gray-700 text-lg">연락처</h1>
-              <div className="flex">
+              <h1 className="font-bold text-gray-700 text-xl">연락처</h1>
+              <div className="flex my-3">
                 <p>wldnd2977@gmail.com</p>
                 <BsCopy className="cursor-pointer text-[8px]" onClick={(e : React.MouseEvent) => copyMail(e)} />
               </div>
