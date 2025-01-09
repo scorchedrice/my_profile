@@ -7,6 +7,7 @@ import EducationPage from "./pages/EducationPage.tsx";
 import ProjectPage from "./pages/ProjectPage.tsx";
 // import FinishPage from "./pages/FinishPage.tsx";
 import Modal from "react-modal";
+import FinishPage from "./pages/FinishPage.tsx";
 
 Modal.setAppElement('#root');
 
@@ -20,6 +21,7 @@ function App() {
       <ArchivePage/>
       <ProjectPage/>
       <EducationPage/>
+      <FinishPage/>
     </>
   );
 }
