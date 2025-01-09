@@ -1,3 +1,19 @@
 export default function FinishPage() {
-  return <div>Finish</div>;
+  return (
+    <footer className="bg-gray-100">
+      <div className="container mx-auto px-4">
+        <div className="text-center text-gray-600 text-[8px] m-4">
+          <p className="mb-2">
+            Updated. 2025.01.09
+          </p>
+          <p className="mb-2">
+            React, Tailwind CSS 기반으로 제작된 사이트입니다.
+          </p>
+          <p>
+            Copyright © 2025. hanjiwoong all rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  )
 }
