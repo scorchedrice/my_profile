@@ -3,7 +3,7 @@ import {projectsDetail} from "../../../shared/project/const/myProjectList.ts";
 import ProjectDescription from "../../project/detail/ProjectDescription.tsx";
 import ProjectImages from "../../project/detail/ProjectImages.tsx";
 
-export default function ProjectModal({projectId} : {projectId : number}) {
+export default function ProjectModal({projectId, onClose} : {projectId : number, onClose : () => void}) {
   const projectDetail = projectsDetail.find(project => project.id === projectId);
   if (!projectDetail) {
     return (
@@ -15,7 +15,7 @@ export default function ProjectModal({projectId} : {projectId : number}) {
 
   return (
     <div className="w-[80dvw] h-[80dvh] max-w-[1200px] flex flex-col items-center">
-      <ProjectOverview overview={projectDetail.overview} />
+      <ProjectOverview overview={projectDetail.overview} onClose={onClose} />
       <ProjectDescription description={projectDetail.description} />
       <ProjectImages images={projectDetail.images}/>
     </div>

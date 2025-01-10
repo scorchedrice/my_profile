@@ -1,11 +1,13 @@
 import {ProjectDetailType} from "../../../shared/types/globalTypes.ts";
 import { FaLink } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
+import { IoIosClose } from "react-icons/io";
 
+interface OverviewProps extends Pick<ProjectDetailType, 'overview'> {
+  onClose: () => void;  // onClose prop 추가
+}
 
-type OverviewProps = Pick<ProjectDetailType, 'overview'>;
-
-export default function ProjectOverview({ overview } : OverviewProps ) {
+export default function ProjectOverview({ overview, onClose } : OverviewProps ) {
   const { title, period, github, demo, teamMembers, role, mainImg } = overview;
   return (
     <div className="relative w-full">
@@ -24,6 +26,12 @@ export default function ProjectOverview({ overview } : OverviewProps ) {
         </div>
       </div>
       <div className="absolute top-0 right-1 flex flex-col text-[40px]">
+        <button
+          type = "button"
+          onClick={() => onClose()}
+        >
+          <IoIosClose/>
+        </button>
         {github !== "" && (
           <button
             type="button"
