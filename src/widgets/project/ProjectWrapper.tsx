@@ -43,7 +43,7 @@ export default function ProjectWrapper() {
         onRequestClose={closeModal}
         style={projectModalStyles}
       >
-        <ProjectModal projectId={openProjectId}/>
+        <ProjectModal projectId={openProjectId} onClose={closeModal} />
       </Modal>
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col lg:flex-row gap-8">
