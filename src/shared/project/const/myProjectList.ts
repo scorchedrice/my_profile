@@ -8,7 +8,11 @@ import baroMain from "../../../assets/project/barobaro/baro_main.png";
 import JanyangMain from "../../../assets/project/janyang/janyang_main.png";
 import {baroInfo} from "../info/baroInfo.ts";
 import {janyangInfo} from "../info/janyangInfo.ts";
+// 포트폴리오
 import {portfolioInfo} from "../info/portfolioInfo.ts";
+// 미루니
+import {miruniInfo} from "../info/miruniInfo.ts";
+import MiruniMain from "../../../assets/project/miruni/miruniMain.png"
 
 export const projects = [
   {
@@ -35,10 +39,19 @@ export const projects = [
     skill: ['Flutter', 'Dart'],
     type: "team"
   },
+  {
+    id: 4,
+    title: "미루니",
+    description: "학습보조 데스크탑 앱입니다.",
+    img: MiruniMain,
+    skill: ['Electron', 'React', 'TypeScript'],
+    type: "team"
+  }
 ];
 
 export const projectsDetail = [
   portfolioInfo,
   baroInfo,
   janyangInfo,
+  miruniInfo,
 ]
