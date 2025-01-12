@@ -1,13 +1,26 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/woong.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>한지웅의 포트폴리오</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/woong.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>한지웅의 포트폴리오</title>
+  <script type="text/javascript">
+    // GitHub Pages에서 접근할 때 캐시 무시하고 새로고침
+    if (window.location.pathname.includes('/my_profile')) {
+      if (!window.location.search.includes('v=')) {
+        window.location.replace(
+                window.location.pathname + '?v=' + new Date().getTime()
+        );
+      }
+    }
+  </script>
+</head>
+<body>
+<div id="root"></div>
+<script type="module" src="/src/main.tsx"></script>
+</body>
 </html>
