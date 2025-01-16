@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 // @ts-ignore
 import * as React from 'react';
+=======
+>>>>>>> d256ce2e3063baeb99ce3abba9fda3e8ededb261
 import {ProjectDetailType} from "../../../shared/types/globalTypes.ts";
 import { FaLink } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
