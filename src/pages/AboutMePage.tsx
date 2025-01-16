@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { motion, AnimatePresence } from "framer-motion"
 import Profile from "../assets/profile.jpg";
 import { BsCopy } from "react-icons/bs";

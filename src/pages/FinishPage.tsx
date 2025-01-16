@@ -1,3 +1,6 @@
+// @ts-ignore
+import * as React from 'react';
+
 export default function FinishPage() {
   return (
     <footer className="bg-gray-100 py-3">

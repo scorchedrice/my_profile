@@ -1,3 +1,5 @@
+// @ts-ignore
+import * as React from 'react';
 import {ProjectDetailType} from "../../../shared/types/globalTypes.ts";
 import Modal from "react-modal";
 import {useState} from "react";

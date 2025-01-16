@@ -1,3 +1,5 @@
+// @ts-ignore
+import * as React from 'react';
 import ProjectWrapper from "../widgets/project/ProjectWrapper.tsx";
 
 export default function ProjectPage() {

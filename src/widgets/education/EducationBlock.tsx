@@ -1,3 +1,6 @@
+// @ts-ignore
+import * as React from 'react';
+
 type Props = {
   name: string,
   content: string[],

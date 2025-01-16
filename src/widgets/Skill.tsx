@@ -1,3 +1,5 @@
+// @ts-ignore
+import * as React from 'react';
 import { motion } from "framer-motion";
 
 type SkillItem = {

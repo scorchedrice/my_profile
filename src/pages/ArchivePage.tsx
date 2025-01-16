@@ -1,3 +1,5 @@
+// @ts-ignore
+import * as React from 'react';
 import { motion } from "framer-motion";
 import { DiGithubFull } from "react-icons/di";
 import { SiGithubpages } from "react-icons/si";

@@ -1,3 +1,5 @@
+// @ts-ignore
+import * as React from 'react';
 import {AnimatePresence, motion} from "framer-motion";
 import ProjectSkills from "./ProjectSkills.tsx";
 import { CgReadme } from "react-icons/cg";

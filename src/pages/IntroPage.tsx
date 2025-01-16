@@ -1,3 +1,5 @@
+// @ts-ignore
+import * as React from 'react';
 import {motion} from "framer-motion"
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import { useEffect, useRef } from 'react';

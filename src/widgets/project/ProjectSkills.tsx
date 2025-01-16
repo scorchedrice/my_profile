@@ -1,3 +1,5 @@
+// @ts-ignore
+import * as React from 'react';
 export default function ProjectSkills({skills} : { skills : string[]}) {
 
   return (

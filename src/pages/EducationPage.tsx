@@ -1,3 +1,5 @@
+// @ts-ignore
+import * as React from 'react';
 import {EducationBlock} from "../widgets/education/EducationBlock.tsx";
 import { educationData } from "../shared/education/const/educationList.ts";
 
