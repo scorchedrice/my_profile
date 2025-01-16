@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 // @ts-ignore
 import * as React from 'react';
-=======
->>>>>>> d256ce2e3063baeb99ce3abba9fda3e8ededb261
 import ProjectOverview from "../../project/detail/ProjectOverview.tsx";
 import {projectsDetail} from "../../../shared/project/const/myProjectList.ts";
 import ProjectDescription from "../../project/detail/ProjectDescription.tsx";

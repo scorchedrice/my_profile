@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 // @ts-ignore
 import * as React from 'react';
-=======
->>>>>>> d256ce2e3063baeb99ce3abba9fda3e8ededb261
 import {EducationBlock} from "../widgets/education/EducationBlock.tsx";
 import { educationData } from "../shared/education/const/educationList.ts";
 

@@ -3,7 +3,6 @@
   "homepage": "https://scorchedrice.github.io/my_profile/",
   "private": true,
   "version": "1.0.0",
-<<<<<<< HEAD
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
@@ -22,20 +21,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
-=======
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "framer-motion": "^11.15.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
->>>>>>> d256ce2e3063baeb99ce3abba9fda3e8ededb261
     "react-icons": "^5.0.1",
     "react-modal": "^3.16.1"
   },

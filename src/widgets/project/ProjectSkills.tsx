@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 // @ts-ignore
 import * as React from 'react';
-=======
->>>>>>> d256ce2e3063baeb99ce3abba9fda3e8ededb261
+
 export default function ProjectSkills({skills} : { skills : string[]}) {
 
   return (
