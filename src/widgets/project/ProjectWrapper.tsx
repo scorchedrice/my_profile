@@ -4,10 +4,13 @@ import {AnimatePresence, motion} from "framer-motion";
 import ProjectSkills from "./ProjectSkills.tsx";
 import { CgReadme } from "react-icons/cg";
 import useProjectFilter from "../../feature/hooks/useProjectFilter.ts";
-import {useState} from "react";
+import {useMemo, useState} from "react";
 import Modal from "react-modal";
 import ProjectModal from "../modal/project/ProjectModal.tsx";
+import {graphql, useStaticQuery} from "gatsby";
+import {GatsbyImage, getImage, IGatsbyImageData} from "gatsby-plugin-image";
 
+type ImageMap = Record<string, IGatsbyImageData>;
 
 export default function ProjectWrapper() {
   const {
@@ -38,6 +41,33 @@ export default function ProjectWrapper() {
     setIsOpenModal(false);
   }
 
+  const data = useStaticQuery(graphql`
+    query {
+      allFile {
+        nodes {
+          relativePath
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+      }
+    }
+  `)
+
+  // 디버깅을 위한 로그
+  // console.log("Query result:", data)
+  // console.log("Project images:", filteredProjects.map(p => p.img))
+
+  const images = useMemo<ImageMap>(() => {
+    return data.allFile.nodes.reduce((acc: ImageMap, node : any) => {
+      if (node.childImageSharp?.gatsbyImageData) {
+        acc[node.relativePath] = getImage(node) as IGatsbyImageData;
+      }
+      return acc;
+    }, {} as ImageMap);
+  }, [data]);
+
+  // @ts-ignore
   return (
     <>
       <Modal
@@ -97,10 +127,10 @@ export default function ProjectWrapper() {
                     }}
                   >
                     <div className="h-[200px] w-full rounded-t-lg overflow-hidden">
-                      <img
-                        src={project.img}
+                      <GatsbyImage
+                        image={images[project.img] as IGatsbyImageData}
                         alt={`${project.title} thumbnail`}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full"
                       />
                     </div>
 

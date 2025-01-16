@@ -1,10 +1,9 @@
-
 import * as React from 'react';
 import { motion, AnimatePresence } from "framer-motion"
-import Profile from "../assets/profile.jpg";
 import { BsCopy } from "react-icons/bs";
 import {profilePictureVariants, profileTextVariant} from "../feature/animation/variants.ts";
 import useAboutMe from "../feature/hooks/useAboutMe.ts";
+import {StaticImage} from "gatsby-plugin-image";
 
 export default function AboutMePage() {
   const { showTooltip, mousePosition, copyMail } = useAboutMe()
@@ -22,7 +21,11 @@ export default function AboutMePage() {
               whileInView="animate"
               viewport={{once: true}}
             >
-              <img src={Profile} alt="profile" className="w-full h-full object-cover"/>
+              <StaticImage
+                src="../assets/profile.jpg"
+                alt="profile"
+                className="w-full h-full object-cover"
+              />
             </motion.div>
           </div>
           <motion.div
