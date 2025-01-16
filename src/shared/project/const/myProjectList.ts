@@ -1,5 +1,5 @@
 // 포폴 페이지
-// import Portfolio from "../../../assets/project/portfolio/portfolio.png";
+import Portfolio from "../../../assets/project/portfolio/portfolio.png";
 
 // 바로바로
 // import baroMain from "../../../assets/project/barobaro/baro_main.png";
@@ -19,7 +19,7 @@ export const projects = [
     id: 1,
     title: "포트폴리오",
     description: "현재 보고계시는 페이지입니다.",
-    img: "project/portfolio/portfolio.png",
+    img: Portfolio,
     skill: ['React', 'TypeScript', 'Tailwind'],
     type: "personal"
   },

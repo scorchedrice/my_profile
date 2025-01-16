@@ -41,33 +41,6 @@ export default function ProjectWrapper() {
     setIsOpenModal(false);
   }
 
-  const data = useStaticQuery(graphql`
-    query {
-      allFile {
-        nodes {
-          relativePath
-          childImageSharp {
-            gatsbyImageData
-          }
-        }
-      }
-    }
-  `)
-
-  // 디버깅을 위한 로그
-  // console.log("Query result:", data)
-  // console.log("Project images:", filteredProjects.map(p => p.img))
-
-  const images = useMemo<ImageMap>(() => {
-    return data.allFile.nodes.reduce((acc: ImageMap, node : any) => {
-      if (node.childImageSharp?.gatsbyImageData) {
-        acc[node.relativePath] = getImage(node) as IGatsbyImageData;
-      }
-      return acc;
-    }, {} as ImageMap);
-  }, [data]);
-
-  // @ts-ignore
   return (
     <>
       <Modal
@@ -127,8 +100,8 @@ export default function ProjectWrapper() {
                     }}
                   >
                     <div className="h-[200px] w-full rounded-t-lg overflow-hidden">
-                      <GatsbyImage
-                        image={images[project.img] as IGatsbyImageData}
+                      <img
+                        src={project.img}
                         alt={`${project.title} thumbnail`}
                         className="w-full h-full"
                       />
