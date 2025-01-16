@@ -4,13 +4,10 @@ import {AnimatePresence, motion} from "framer-motion";
 import ProjectSkills from "./ProjectSkills.tsx";
 import { CgReadme } from "react-icons/cg";
 import useProjectFilter from "../../feature/hooks/useProjectFilter.ts";
-import {useMemo, useState} from "react";
+import {useState} from "react";
 import Modal from "react-modal";
 import ProjectModal from "../modal/project/ProjectModal.tsx";
-import {graphql, useStaticQuery} from "gatsby";
-import {GatsbyImage, getImage, IGatsbyImageData} from "gatsby-plugin-image";
-
-type ImageMap = Record<string, IGatsbyImageData>;
+import StaticImageRender from "./StaticImageRender.tsx";
 
 export default function ProjectWrapper() {
   const {
@@ -52,7 +49,6 @@ export default function ProjectWrapper() {
       </Modal>
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col lg:flex-row gap-8">
-          {/*필터*/}
           <div className="w-full lg:w-64 bg-white rounded-lg shadow-md p-4 h-fit">
             <div className="space-y-2">
               <button
@@ -100,13 +96,8 @@ export default function ProjectWrapper() {
                     }}
                   >
                     <div className="h-[200px] w-full rounded-t-lg overflow-hidden">
-                      <img
-                        src={project.img}
-                        alt={`${project.title} thumbnail`}
-                        className="w-full h-full"
-                      />
+                      <StaticImageRender imageTitle={project.title} />
                     </div>
-
                     <div className="p-6 flex flex-col h-[200px] my-1 justify-between">
                       <div className="flex items-center gap-2">
                         <h2 className="text-xl font-bold">{project.title}</h2>
