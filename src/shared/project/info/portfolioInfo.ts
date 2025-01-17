@@ -29,7 +29,7 @@ export const portfolioInfo = {
       },
       {
         title: "React → Gatsby",
-        content: "25.01.17, 프로필페이지 특성을 고려하여, SSG 프레임워크인 Gatsby로 체제를 전환했습니다. 앞으로 SEO 작업 및 오류들을 수정하며 개선할 예정입니다."
+        content: "25.01.17, 프로필페이지 특성을 고려하여, SSG 프레임워크인 Gatsby로 체제를 전환했습니다. Vite 관련된 옵션을 제거했으며, 앞으로 SEO 작업 및 오류들을 수정하며 개선할 예정입니다."
       },
     ],
     techStack: {
