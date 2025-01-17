@@ -47,6 +47,11 @@ export const portfolioInfo = {
         problem: "Gatsby로 전환하는 과정에서 사소한 오류가 발생했습니다.",
         solution: "Gatsby의 빌드 설정을 담당하는 gatsby-config.js는 vite와 다르게 CommonJS를 활용합니다. 이를 수정하여 빌드를 진행했습니다. 이미지를 활용하는 방식 또한 다른데, 상황에 맞게 StaticImage를 활용하며 이미지 랜더링에서 발생한 404 오류를 해결했습니다.",
         solutionSummary: "이미지 랜더링 404 오류 및 ES6 → CommonJS",
+      },
+      {
+        problem: "모바일 뷰 Smooth Scroll 기능이 동작하지 않았습니다.",
+        solution: "console에 모든 값이 잘 나오지만, 스크롤만 동작하지 않았습니다. 원인이 smooth scroll임을 알았고, 기존 smooth 스크롤 기능을 setTimeout을(10ms) 활용한 custom 스크롤 애니메이션을 적용하여 오류를 해결했습니다.",
+        solutionSummary: "setTimeout을 활용하여 스크롤 처리 타이밍 변경",
       }
     ],
     achievement: [

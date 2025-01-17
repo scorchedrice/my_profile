@@ -19,14 +19,40 @@ export default function Navigator() {
   function scrollToSection(id: string) {
     const element = document.getElementById(id);
     const navHeight = 50;
+
     if (element) {
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.scrollY - navHeight;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-      setIsOpen(false); // 메뉴 클릭 시 드롭다운 닫기
+      const duration = 500; // 스크롤 지속시간 (ms)
+      const startPosition = window.scrollY;
+      const distance = offsetPosition - startPosition;
+      let startTime: number;
+
+      function animation(currentTime: number) {
+        if (!startTime) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / duration, 1);
+
+        // easeInOutQuad easing function
+        const ease = progress < 0.5
+          ? 2 * progress * progress
+          : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+
+        window.scrollTo(0, startPosition + (distance * ease));
+
+        if (timeElapsed < duration) {
+          requestAnimationFrame(animation);
+        }
+      }
+
+      try {
+        requestAnimationFrame(animation);
+        setIsOpen(false);
+      } catch (error) {
+        console.log('scroll to section error:', error);
+        window.scrollTo(0, offsetPosition);
+        setIsOpen(false);
+      }
     }
   }
 
@@ -83,7 +109,9 @@ export default function Navigator() {
               <li
                 key={item}
                 className="px-4 py-3 hover:bg-gray-100 cursor-pointer text-gray-700 text-sm transition-colors"
-                onClick={() => scrollToSection(item)}
+                onClick={() => {
+                  scrollToSection(item)
+                }}
               >
                 {item}
               </li>
