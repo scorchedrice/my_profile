@@ -3,9 +3,9 @@ import * as React from 'react';
 import { motion } from "framer-motion";
 import Skill from "../widgets/Skill"
 import { techStackData } from "../assets/skills/techStack.ts";
-import { containerVariants, sectionVariants } from "../feature/animation/variants.ts";
+import { containerVariants, sectionVariants } from "../feature/skills/animations/consts.ts";
 
-export default function TechStackPage() {
+export default function Skills() {
   const sections = [
     { name: "Language", data: techStackData.language },
     { name: "Frontend", data: techStackData.frontend },
@@ -14,7 +14,7 @@ export default function TechStackPage() {
   ];
 
   return (
-    <motion.div className="bg-amber-300 flex flex-col items-center" id="Skills">
+    <motion.section className="bg-amber-300 flex flex-col items-center" id="Skills">
       <h1 className="text-[50px] font-bold text-gray-700">SKILLS</h1>
       <motion.div
         className="m-4"
@@ -34,6 +34,6 @@ export default function TechStackPage() {
           </motion.div>
         ))}
       </motion.div>
-    </motion.div>
+    </motion.section>
   );
 }

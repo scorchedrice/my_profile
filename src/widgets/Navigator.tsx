@@ -1,60 +1,13 @@
 // @ts-ignore
 import * as React from 'react';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
 import { IoMenu, IoClose } from "react-icons/io5";
 import { VscFeedback } from "react-icons/vsc";
+import { menuItems } from "../shared/const/menuItemsList.ts";
+import useScrollToSection from "../feature/nav/hooks/useScrollToSection.ts";
 
 export default function Navigator() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const menuItems = [
-    "AboutMe",
-    "Skills",
-    "Archive",
-    "Projects",
-    "Education"
-  ];
-
-  function scrollToSection(id: string) {
-    const element = document.getElementById(id);
-    const navHeight = 50;
-
-    if (element) {
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.scrollY - navHeight;
-      const duration = 500; // 스크롤 지속시간 (ms)
-      const startPosition = window.scrollY;
-      const distance = offsetPosition - startPosition;
-      let startTime: number;
-
-      function animation(currentTime: number) {
-        if (!startTime) startTime = currentTime;
-        const timeElapsed = currentTime - startTime;
-        const progress = Math.min(timeElapsed / duration, 1);
-
-        // easeInOutQuad easing function
-        const ease = progress < 0.5
-          ? 2 * progress * progress
-          : 1 - Math.pow(-2 * progress + 2, 2) / 2;
-
-        window.scrollTo(0, startPosition + (distance * ease));
-
-        if (timeElapsed < duration) {
-          requestAnimationFrame(animation);
-        }
-      }
-
-      try {
-        requestAnimationFrame(animation);
-        setIsOpen(false);
-      } catch (error) {
-        console.log('scroll to section error:', error);
-        window.scrollTo(0, offsetPosition);
-        setIsOpen(false);
-      }
-    }
-  }
+  const { isOpen, setIsOpen, scrollToSection } = useScrollToSection()
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 h-[50px] bg-white/95 shadow-md w-[100dvw]">

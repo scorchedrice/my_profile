@@ -7,7 +7,7 @@ import { FaGithub } from "react-icons/fa";
 
 export default function ArchivePage() {
   return (
-    <div id="Archive" className="bg-gray-800 flex flex-col items-center">
+    <section id="Archive" className="bg-gray-800 flex flex-col items-center">
       <h1 className="text-[50px] font-bold text-gray-700 text-white">ARCHIVE</h1>
       <div className="flex flex-col md:flex-row items-center p-4" >
         <motion.div className="bg-white w-[300px] h-[300px] rounded-lg m-8 cursor-pointer"
@@ -48,6 +48,6 @@ export default function ArchivePage() {
           </div>
         </motion.div>
       </div>
-    </div>
+    </section>
   )
 }

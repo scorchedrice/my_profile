@@ -1,6 +1,6 @@
 import IntroPage from "./pages/IntroPage.tsx";
 import AboutMePage from "./pages/AboutMePage.tsx";
-import TechStackPage from "./pages/TechStackPage.tsx";
+import Skills from "./pages/Skills.tsx";
 import Navigator from "./widgets/Navigator.tsx";
 import ArchivePage from "./pages/ArchivePage.tsx";
 import EducationPage from "./pages/EducationPage.tsx";
@@ -17,7 +17,7 @@ function App() {
       <Navigator/>
       <IntroPage/>
       <AboutMePage/>
-      <TechStackPage/>
+      <Skills/>
       <ArchivePage/>
       <ProjectPage/>
       <EducationPage/>

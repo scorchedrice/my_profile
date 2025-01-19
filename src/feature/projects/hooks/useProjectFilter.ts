@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import { projects } from "../../shared/project/const/myProjectList.ts"
+import { projects } from "../../../shared/project/const/myProjectList.ts"
 
 type FilterType = "all" | "team" | "personal";
 

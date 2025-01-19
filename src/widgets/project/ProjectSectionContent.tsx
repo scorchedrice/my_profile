@@ -3,13 +3,13 @@ import * as React from 'react';
 import {AnimatePresence, motion} from "framer-motion";
 import ProjectSkills from "./ProjectSkills.tsx";
 import { CgReadme } from "react-icons/cg";
-import useProjectFilter from "../../feature/hooks/useProjectFilter.ts";
-import {useState} from "react";
+import useProjectFilter from "../../feature/projects/hooks/useProjectFilter.ts";
 import Modal from "react-modal";
 import ProjectModal from "../modal/project/ProjectModal.tsx";
 import StaticImageRender from "./StaticImageRender.tsx";
+import useProjectModal from "../../feature/projects/hooks/useProjectModal.ts";
 
-export default function ProjectWrapper() {
+export default function ProjectSectionContent() {
   const {
     setProjectType,
     getButtonStyle,
@@ -17,26 +17,7 @@ export default function ProjectWrapper() {
     gridHeight
   } = useProjectFilter()
 
-  const [isOpenModal, setIsOpenModal] = useState(false);
-  const [openProjectId, setOpenProjectId] = useState<number>(1);
-  async function chooseProject(projectId: number) {
-    setOpenProjectId(projectId);
-    setIsOpenModal(true);
-  }
-  const projectModalStyles = {
-    content: {
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
-    },
-  };
-
-  function closeModal() {
-    setIsOpenModal(false);
-  }
+  const { isOpenModal, projectModalStyles, closeModal, openProjectId, chooseProject } = useProjectModal();
 
   return (
     <>

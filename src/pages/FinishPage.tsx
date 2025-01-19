@@ -6,7 +6,7 @@ export default function FinishPage() {
       <div className="container mx-auto px-4">
         <div className="text-center text-gray-600 text-[8px] my-2">
           <p className="mb-2">
-            Updated. 2025.01.16
+            Updated. 2025.01.20
           </p>
           <p className="mb-2">
             React, Gatsby, Tailwind CSS 기반으로 제작된 사이트입니다.

@@ -4,7 +4,8 @@ import {motion} from "framer-motion"
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import { useEffect, useRef } from 'react';
 import { isMobile } from "../shared/isMobile.ts"
-import useScrollAnimations from "../feature/animation/opacity.ts";
+import useScrollAnimations from "../feature/intro/animation/useScrollAnimations.ts";
+import { scrollTextAnimation } from "../feature/intro/animation/consts.ts";
 
 // 데이터 다뤄본 경험 이런게 있으면 도움이 많이 되었다.
 // 백엔드면 일 경력이 있냐 이런거
@@ -39,17 +40,8 @@ export default function IntroPage() {
 
   const { text1Opacity, text2Opacity, text3Opacity, bgOpacity } = useScrollAnimations()
 
-  const scrollTextAnimation = {
-    y: [0, -20, 0],
-    transition: {
-      duration: 2,
-      repeat: Infinity,
-      ease: "easeInOut",
-    }
-  }
-
   return (
-    <div
+    <section
       className="h-[400vh]"
       id="Intro"
     >
@@ -117,7 +109,7 @@ export default function IntroPage() {
           </motion.div>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 }
 

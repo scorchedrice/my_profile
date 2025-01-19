@@ -2,7 +2,7 @@
 import * as React from 'react';
 import IntroPage from "./IntroPage.tsx";
 import AboutMePage from "./AboutMePage.tsx";
-import TechStackPage from "./TechStackPage.tsx";
+import Skills from "./Skills.tsx";
 import Navigator from "../widgets/Navigator.tsx";
 import ArchivePage from "./ArchivePage.tsx";
 import EducationPage from "./EducationPage.tsx";
@@ -17,13 +17,17 @@ if (typeof window !== 'undefined') {
 export default function Home() {
   return (
     <>
-      <Navigator/>
-      <IntroPage/>
-      <AboutMePage/>
-      <TechStackPage/>
-      <ArchivePage/>
-      <ProjectPage/>
-      <EducationPage/>
+      <header>
+        <Navigator/>
+      </header>
+      <main>
+        <IntroPage/>
+        <AboutMePage/>
+        <Skills/>
+        <ArchivePage/>
+        <ProjectPage/>
+        <EducationPage/>
+      </main>
       <FinishPage/>
     </>
   );
