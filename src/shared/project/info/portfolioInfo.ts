@@ -28,8 +28,8 @@ export const portfolioInfo = {
         content: "개인/팀 프로젝트를 구분하여 볼 수 있습니다, 추후 백엔드 프로젝트 경험이 생기면 기술 역할 별 필터링 기능도 추가할 예정입니다."
       },
       {
-        title: "React → Gatsby",
-        content: "25.01.17, 프로필페이지 특성을 고려하여, SSG 프레임워크인 Gatsby로 체제를 전환했습니다. Vite 관련된 옵션을 제거했으며, 앞으로 SEO 작업 및 오류들을 수정하며 개선할 예정입니다."
+        title: "React → Gatsby (2025.01)",
+        content: "프로필페이지 특성을 고려하여, SSG 프레임워크인 Gatsby로 체제를 전환했습니다. 시멘틱 태그, Head API를 활용하여 SEO 작업을 진행했습니다."
       },
     ],
     techStack: {

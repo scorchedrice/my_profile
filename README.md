@@ -13,6 +13,8 @@
 - 25.01.20, header, section, nav, footer 등 시멘틱 태그 적용
 - 25.01.20, Head API를 활용한 SEO 작업 진행 (title, meta ...)
 
+---
+
 # 🪄 사용한 기술
 ## frontend
 - Gatsby
@@ -25,6 +27,8 @@
 ## tools
 - Git
 - GitHub
+
+---
 
 # 🛠️ 트러블 슈팅
 ## 스크롤 사이즈를 예상하는 함수를 추가하여 불필요한 스크롤 길이 변화 이슈 해결
@@ -45,6 +49,17 @@ Gatsby의 빌드 설정을 담당하는 gatsby-config.js는 vite와 다르게 Co
 
 console에 모든 값이 잘 나오지만, 스크롤만 동작하지 않았습니다. 원인이 smooth scroll임을 알았고, 기존 smooth 스크롤 기능을 setTimeout을(10ms) 활용한 custom 스크롤 애니메이션을 적용하여 오류를 해결했습니다.
 
+---
+
+# 🚀 LightHouse Score (25.01.20 기준)
+
+## Desktop
+<img src="./lightHouseScore/250120/profile_desktop_lighthouse.png" alt="desktop_lighthouse" width="400px">
+
+## Mobile
+<img src="./lightHouseScore/250120/profile_mobile_lighthouse.png" alt="mobile_lighthouse" width="400px">
+
+---
 
 # 🎯 성과
 - framer-motion을 활용해 컴포넌트 단위로 애니메이션을 적용할 수 있었습니다. 간단한 조작으로 사용자 인터렉션을 제공할 수 있어 재미있는 경험이었습니다.
