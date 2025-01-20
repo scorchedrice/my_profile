@@ -1,10 +1,5 @@
 module.exports = {
   pathPrefix: "/my_profile",
-  siteMetadata: {
-    title: `한지웅의 프로필 페이지입니다.`,
-    description: `FE 개발자 한지웅의 포트폴리오입니다.`,
-    siteUrl: `https://scorchedrice.github.io/my_profile`
-  },
   flags: {
     DEV_SSR: true,
   },
@@ -12,7 +7,6 @@ module.exports = {
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-react-helmet',
     'gatsby-plugin-postcss',
     {
       resolve: 'gatsby-source-filesystem',

@@ -1,16 +1,7 @@
 // @ts-ignore
 import * as React from 'react';
 import { motion } from "framer-motion";
-
-type SkillItem = {
-  name: string;
-  Url: string;
-  description?: string;
-}
-
-type SkillProps = {
-  skillList: SkillItem[];
-}
+import { SkillProps } from "../shared/types/skillType.ts";
 
 export default function Skill({ skillList }: SkillProps) {  // 수정: 구조 분해 할당으로 skillList를 받음
   return (
