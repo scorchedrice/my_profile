@@ -10,7 +10,8 @@
 
 ## React → Gatsby
 - 25.01.17, 프로필페이지 특성을 고려하여, SSG 프레임워크인 Gatsby로 체제를 전환했습니다. Vite 관련된 옵션을 제거했으며, 앞으로 SEO 작업 및 오류들을 수정하며 개선할 예정입니다.
-  - 25.01.20, header, section, nav, footer 등 시멘틱 태그 일부 적용
+- 25.01.20, header, section, nav, footer 등 시멘틱 태그 적용
+- 25.01.20, Head API를 활용한 SEO 작업 진행 (title, meta ...)
 
 # 🪄 사용한 기술
 ## frontend
