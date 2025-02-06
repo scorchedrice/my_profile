@@ -44,6 +44,7 @@ export default function ArchivePage() {
                     onClick={() => window.open('https://scorchedrice.github.io', '_blank')}
                     onKeyDown={handleKeyPress('https://scorchedrice.github.io')}
                     aria-label="git 블로그 주소"
+                    role="listitem"
         >
           <div className="flex justify-center items-center mx-auto">
             <SiGithubpages className="text-[100px]"/>
