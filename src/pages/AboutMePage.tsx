@@ -11,11 +11,11 @@ export default function AboutMePage() {
   return (
     <>
       {/* Section은 주황색으로 감싸는 부분 */}
-      <section className="bg-amber-500 flex flex-col" id="AboutMe">
+      <section className="bg-amber-500 flex flex-col" id="AboutMe" aria-label="자기소개">
         {/* 하단 div는 AboutMe 최대 width를 조절하는 용도 */}
         <div className="max-w-5xl mx-auto w-full">
           <h1 className="text-[50px] font-bold text-gray-700 text-center">ABOUT ME</h1>
-          <motion.div className="flex flex-col md:flex-row items-center p-4">
+          <motion.div className="flex flex-col md:flex-row items-center p-4" role="region" aria-label="자기소개 에셋 영역">
             <div className="w-full md:w-1/2 flex justify-center items-center mb-8 md:mb-0">
               <motion.div
                 className="w-[250px] h-[250px] rounded-full overflow-hidden"
@@ -23,6 +23,7 @@ export default function AboutMePage() {
                 variants={profilePictureVariants}
                 whileInView="animate"
                 viewport={{once: true}}
+                aria-label="애니메이션 동작 프로필사진"
               >
                 <StaticImage
                   src="../assets/profile.jpg"
@@ -38,27 +39,34 @@ export default function AboutMePage() {
               whileInView="animate"
               viewport={{once: true}}
             >
-              <motion.div className="m-8">
-                <h1 className="font-bold text-gray-700 text-xl">이름</h1>
-                <p className="my-3">한지웅</p>
-              </motion.div>
-              <motion.div className="m-8">
-                <h1 className="font-bold text-gray-700 text-xl">생년월일</h1>
-                <p className="my-3">1998.01.30</p>
-              </motion.div>
-              <motion.div className="m-8">
-                <h1 className="font-bold text-gray-700 text-xl">연락처</h1>
-                <div className="flex my-3">
+              <dt className="m-8">
+                <dl className="font-bold text-gray-700 text-xl">이름</dl>
+                <dl className="my-3">한지웅</dl>
+              </dt>
+              <dt className="m-8">
+                <dl className="font-bold text-gray-700 text-xl">생년월일</dl>
+                <dl className="my-3">1998.01.30</dl>
+              </dt>
+              <dt className="m-8">
+                <dl className="font-bold text-gray-700 text-xl">연락처</dl>
+                <dl className="flex my-3">
                   <p>wldnd2977@gmail.com</p>
-                  <BsCopy className="cursor-pointer text-[8px]" onClick={(e : React.MouseEvent) => copyMail(e)} />
-                </div>
-              </motion.div>
+                  <button
+                    aria-label="이메일 주소 복사"
+                    onClick={(e : React.MouseEvent) => copyMail(e)}
+                  >
+                    <BsCopy className="cursor-pointer text-[12px] m-2 mb-1"/>
+                  </button>
+                </dl>
+              </dt>
             </motion.div>
           </motion.div>
         </div>
         <AnimatePresence>
           {showTooltip && (
             <motion.div
+              role="status"
+              aria-live="polite"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
