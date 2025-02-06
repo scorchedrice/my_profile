@@ -33,7 +33,7 @@ export default function ArchivePage() {
               github.com/scorchedrice
             </div>
             <ul aria-label="github 소개">
-              <h2 className="font-bold mb-2">소스 코드 저장소입니다.</h2>
+              <li className="font-bold mb-2">소스 코드 저장소입니다.</li>
               <li>‣ 개인적으로 진행한 학습 코드</li>
               <li>‣ 개인 / 팀 프로젝트 코드 등</li>
             </ul>
@@ -54,7 +54,7 @@ export default function ArchivePage() {
               scorchedrice.github.io
             </div>
             <ul aria-label="블로그 소개">
-              <h2 className="font-bold mb-2">기록 및 공유 목적의 블로그입니다.</h2>
+              <li className="font-bold mb-2">기록 및 공유 목적의 블로그입니다.</li>
               <li>‣ 학습 일기 작성</li>
               <li>‣ 학습내용 정리, 내용 공유</li>
               <li>‣ 고민하며 성장하는 과정들을 기록</li>
