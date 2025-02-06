@@ -17,7 +17,7 @@ export default function ArchivePage() {
     <section id="Archive" className="bg-gray-800 flex flex-col items-center" aria-label="아카이브 섹션">
       <h1 className="text-[50px] font-bold text-gray-700 text-white">ARCHIVE</h1>
       <div className="flex flex-col md:flex-row items-center p-4" role="list" aria-label="아카이브 주소 모음">
-        <motion.div className="bg-white w-[300px] h-[300px] rounded-lg m-8 cursor-pointer"
+        <motion.div className="bg-gray-50 w-[300px] h-[300px] rounded-lg m-8 cursor-pointer"
                     whileHover={{scale: 1.1}}
                     onClick={() => window.open('https://github.com/scorchedrice', '_blank')}
                     onKeyDown={handleKeyPress('https://github.com/scorchedrice')}
@@ -29,7 +29,7 @@ export default function ArchivePage() {
             <DiGithubFull className="text-[100px] ml-1"/>
           </div>
           <div className="mx-4">
-            <div className="text-blue-400 mb-4">
+            <div className="text-blue-600 mb-4">
               github.com/scorchedrice
             </div>
             <ul aria-label="github 소개">
@@ -39,7 +39,7 @@ export default function ArchivePage() {
             </ul>
           </div>
         </motion.div>
-        <motion.div className="bg-white w-[300px] h-[300px] rounded-lg m-8 cursor-pointer"
+        <motion.div className="bg-gray-50 w-[300px] h-[300px] rounded-lg m-8 cursor-pointer"
                     whileHover={{scale: 1.1}}
                     onClick={() => window.open('https://scorchedrice.github.io', '_blank')}
                     onKeyDown={handleKeyPress('https://scorchedrice.github.io')}
@@ -50,7 +50,7 @@ export default function ArchivePage() {
             <SiGithubpages className="text-[100px]"/>
           </div>
           <div className="mx-4">
-            <div className="text-blue-400 mb-4">
+            <div className="text-blue-600 mb-4">
               scorchedrice.github.io
             </div>
             <ul aria-label="블로그 소개">

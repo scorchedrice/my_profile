@@ -27,7 +27,7 @@ export default function useProjectFilter() {
   const buttonBaseStyle = "w-full py-2 px-4 rounded-lg transition-all duration-200 text-left";
   const getButtonStyle = (type: string) => {
     return projectType === type
-      ? `${buttonBaseStyle} bg-blue-500 text-white shadow-md`
+      ? `${buttonBaseStyle} bg-blue-500 text-white shadow-md font-medium`
       : `${buttonBaseStyle} hover:bg-gray-100`;
   };
 
