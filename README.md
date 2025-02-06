@@ -1,3 +1,5 @@
+[배포된 페이지](https://scorchedrice.github.io/my_profile)
+
 # 💡 핵심기능
 ## 프로젝트 구조
 - FSD구조를 채택했습니다.
@@ -51,13 +53,17 @@ console에 모든 값이 잘 나오지만, 스크롤만 동작하지 않았습�
 
 ---
 
-# 🚀 LightHouse Score (25.01.20 기준)
+# 🚀 LightHouse Score (25.02.06 기준)
 
 ## Desktop
-<img src="./lightHouseScore/250120/profile_desktop_lighthouse.png" alt="desktop_lighthouse" width="400px">
+<img src="./lightHouseScore/250206/profile_desktop_lighthouse.png" alt="desktop_lighthouse" width="400px">
+
+- Accessibility 87(25.01.20)에서 100(25.02.06)으로 개선
 
 ## Mobile
-<img src="./lightHouseScore/250120/profile_mobile_lighthouse.png" alt="mobile_lighthouse" width="400px">
+<img src="./lightHouseScore/250206/profile_mobile_lighthouse.png" alt="mobile_lighthouse" width="400px">
+
+- Accessibility 81(25.01.20)에서 95(25.02.06)으로 개선
 
 ---
 
