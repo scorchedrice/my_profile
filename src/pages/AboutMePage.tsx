@@ -39,17 +39,17 @@ export default function AboutMePage() {
               whileInView="animate"
               viewport={{once: true}}
             >
-              <dt className="m-8">
-                <dl className="font-bold text-gray-700 text-xl">이름</dl>
-                <dl className="my-3">한지웅</dl>
-              </dt>
-              <dt className="m-8">
-                <dl className="font-bold text-gray-700 text-xl">생년월일</dl>
-                <dl className="my-3">1998.01.30</dl>
-              </dt>
-              <dt className="m-8">
-                <dl className="font-bold text-gray-700 text-xl">연락처</dl>
-                <dl className="flex my-3">
+              <dl className="m-8">
+                <dt className="font-bold text-gray-700 text-xl">이름</dt>
+                <dd className="my-3">한지웅</dd>
+              </dl>
+              <dl className="m-8">
+                <dt className="font-bold text-gray-700 text-xl">생년월일</dt>
+                <dd className="my-3">1998.01.30</dd>
+              </dl>
+              <dl className="m-8">
+                <dt className="font-bold text-gray-700 text-xl">연락처</dt>
+                <dd className="flex my-3">
                   <p>wldnd2977@gmail.com</p>
                   <button
                     aria-label="이메일 주소 복사"
@@ -57,8 +57,8 @@ export default function AboutMePage() {
                   >
                     <BsCopy className="cursor-pointer text-[12px] m-2 mb-1"/>
                   </button>
-                </dl>
-              </dt>
+                </dd>
+              </dl>
             </motion.div>
           </motion.div>
         </div>
