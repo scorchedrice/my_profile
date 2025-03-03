@@ -6,7 +6,7 @@ export const portfolioInfo = {
     title: "포트폴리오",
     period: "2024.12-진행중",
     github: "https://github.com/scorchedrice/my_profile",
-    demo: "https://scorchedrice.github.io/my_profile",
+    demo: "https://scorchedrice.com",
     teamMembers: 1,
     role: "개인 프로젝트",
     mainImg: Portfolio,
