@@ -15,6 +15,9 @@
 - 25.01.20, header, section, nav, footer 등 시멘틱 태그 적용
 - 25.01.20, Head API를 활용한 SEO 작업 진행 (title, meta ...)
 
+## [`scorchedrice.com`](https://scorchedrice.com) 도메인 등록
+- 25.03.03, 기존 [`scorchedrice.github.io/my_profile`](https://scorchedrice.github.io/my_profile)에 배포되어있던 프로필 페이지를 이전했습니다.
+
 ---
 
 # 🪄 사용한 기술
@@ -26,6 +29,7 @@
 - Framer Motion
 ## deployment
 - Github Action
+- Cloudflare
 ## tools
 - Git
 - GitHub
@@ -71,6 +75,6 @@ console에 모든 값이 잘 나오지만, 스크롤만 동작하지 않았습�
 - framer-motion을 활용해 컴포넌트 단위로 애니메이션을 적용할 수 있었습니다. 간단한 조작으로 사용자 인터렉션을 제공할 수 있어 재미있는 경험이었습니다.
 
 - React로 개발한 프로젝트를 Github Action을 활용하여 github pages로 배포하는 경험을 쌓았습니다.
+  - 도메인을 구매하고 등록하는 과정을 진행하며 관련 역량을 키웠습니다.
 
 - React로 개발한 프로젝트를 Gatsby로 전환하는 작업을 진행하며 Gatsby의 활용법을 익혔습니다.
-
