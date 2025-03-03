@@ -1,4 +1,4 @@
-[배포된 페이지](https://scorchedrice.github.io/my_profile)
+[배포된 페이지](https://scorchedrice.com)
 
 # 💡 핵심기능
 ## 프로젝트 구조
