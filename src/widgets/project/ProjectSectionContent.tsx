@@ -1,33 +1,23 @@
-// @ts-ignore
-import * as React from 'react';
 import {AnimatePresence, motion} from "framer-motion";
 import ProjectSkills from "./ProjectSkills.tsx";
 import { CgReadme } from "react-icons/cg";
-import useProjectFilter from "../../feature/projects/hooks/useProjectFilter.ts";
-import Modal from "react-modal";
-import ProjectModal from "../modal/project/ProjectModal.tsx";
+import useProjectFilter from "../../feature/hooks/useProjectFilter.ts";
 import StaticImageRender from "./StaticImageRender.tsx";
-import useProjectModal from "../../feature/projects/hooks/useProjectModal.ts";
+import useProjectModal from "../../feature/hooks/useProjectModal.ts";
+import {useSetFilterType} from "../../shared/stores/useProjectFilterStore.ts";
 
 export default function ProjectSectionContent() {
   const {
-    setProjectType,
     getButtonStyle,
     filteredProjects,
     gridHeight
   } = useProjectFilter()
+  const setProjectType = useSetFilterType();
 
-  const { isOpenModal, projectModalStyles, closeModal, openProjectId, chooseProject } = useProjectModal();
+  const { openModal } = useProjectModal();
 
   return (
     <>
-      <Modal
-        isOpen={isOpenModal}
-        onRequestClose={closeModal}
-        style={projectModalStyles}
-      >
-        <ProjectModal projectId={openProjectId} onClose={closeModal} />
-      </Modal>
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col lg:flex-row gap-8">
           <div className="w-full lg:w-64 bg-white rounded-lg shadow-md p-4 h-fit">
@@ -86,7 +76,7 @@ export default function ProjectSectionContent() {
                           type="button"
                           className="flex items-center gap-1 px-2 text-sm border border-gray-700 rounded-[4px] hover:bg-gray-100 transition-colors"
                           onClick={() => {
-                            chooseProject(project.id)
+                            openModal(project.id)
                           }}
                         >
                           <CgReadme/>

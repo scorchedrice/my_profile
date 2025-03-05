@@ -1,6 +1,6 @@
 export const menuItems = [
   "AboutMe",
-  "Skills",
+  "SkillsPage",
   "Archive",
   "Projects",
   "Education"

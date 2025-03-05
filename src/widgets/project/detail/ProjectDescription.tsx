@@ -1,6 +1,6 @@
 // @ts-ignore
 import * as React from 'react';
-import {ProjectDetailType} from "../../../shared/types/globalTypes.ts";
+import {ProjectDetailType} from "../../../shared/types/projectTypes.ts";
 
 type DescriptionProps = Pick<ProjectDetailType, 'description'>
 

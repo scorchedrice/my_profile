@@ -8,6 +8,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-postcss',
+    `gatsby-plugin-provide-react`,
     {
       resolve: 'gatsby-source-filesystem',
       options: {

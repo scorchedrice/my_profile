@@ -1,7 +1,4 @@
-// @ts-ignore
-import * as React from 'react';
-
-import {ProjectDetailType} from "../../../shared/types/globalTypes.ts";
+import {ProjectDetailType} from "../../../shared/types/projectTypes.ts";
 import { FaLink } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { IoIosClose } from "react-icons/io";
@@ -12,6 +9,7 @@ interface OverviewProps extends Pick<ProjectDetailType, 'overview'> {
 
 export default function ProjectOverview({ overview, onClose } : OverviewProps ) {
   const { title, period, github, demo, teamMembers, role, mainImg } = overview;
+
   return (
     <div className="relative w-full">
       <div className="flex flex-col items-center">
@@ -24,9 +22,7 @@ export default function ProjectOverview({ overview, onClose } : OverviewProps ) 
             {teamMembers}인 ({role})
           </div>
         </div>
-        <div>
-          <img src={mainImg} alt={`${title}_mainImage`} className="max-w-[300px] max-h-[300px] object-contain"/>
-        </div>
+        <img src={mainImg} alt="main" width="300px"/>
       </div>
       <div className="absolute top-0 right-1 flex flex-col text-[40px]">
         <button

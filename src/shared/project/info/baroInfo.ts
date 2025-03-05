@@ -1,12 +1,12 @@
-import baroMain from "../../../assets/project/barobaro/baro_main.png";
-import baroSign from "../../../assets/project/barobaro/baro_sign.png";
-import baroPost from "../../../assets/project/barobaro/baro_post.png";
-import baroDetail from "../../../assets/project/barobaro/baro_detail.png";
-import baroPin from "../../../assets/project/barobaro/baro_pin.png";
-import baroContract1 from "../../../assets/project/barobaro/baro_contract_1.png";
-import baroContract2 from "../../../assets/project/barobaro/baro_contract_2.png";
-import baroContract3 from "../../../assets/project/barobaro/baro_contract_3.png";
-import baroVerification from "../../../assets/project/barobaro/baro_verification.png";
+import BaroMain from "../../../assets/project/barobaro/baro_main.png";
+import BaroSign from "../../../assets/project/barobaro/baro_sign.png";
+import BaroPost from "../../../assets/project/barobaro/baro_post.png";
+import BaroDetail from "../../../assets/project/barobaro/baro_detail.png";
+import BaroPin from "../../../assets/project/barobaro/baro_pin.png";
+import BaroContract1 from "../../../assets/project/barobaro/baro_contract_1.png";
+import BaroContract2 from "../../../assets/project/barobaro/baro_contract_2.png";
+import BaroContract3 from "../../../assets/project/barobaro/baro_contract_3.png";
+import BaroVerification from "../../../assets/project/barobaro/baro_verification.png";
 
 export const baroInfo = {
   id: 2,
@@ -17,7 +17,7 @@ export const baroInfo = {
     demo: "",
     teamMembers: 6,
     role: "팀 프로젝트, 프론트엔드",
-    mainImg: baroMain,
+    mainImg: BaroMain,
 },
   description: {
     summary: "전자계약서 기반의 공연 물품 대여 중개 플랫폼입니다.",
@@ -55,40 +55,40 @@ export const baroInfo = {
   },
   images: [
     {
-      url: baroMain,
+      url: BaroMain,
       caption: "메인 화면"
     },
     {
-      url: baroSign,
+      url: BaroSign,
       caption: "회원가입 과정"
     },
 
     {
-      url: baroPost,
+      url: BaroPost,
       caption: "게시물 등록 과정"
     },
     {
-      url: baroDetail,
+      url: BaroDetail,
       caption: "게시물 상세 정보"
     },
     {
-      url: baroPin,
+      url: BaroPin,
       caption: "핀번호 입력 창"
     },
     {
-      url: baroContract1,
+      url: BaroContract1,
       caption: "계약 요청"
     },
     {
-      url: baroContract2,
+      url: BaroContract2,
       caption: "소유자의 승인, 대여자측에게 확인 요청"
     },
     {
-      url: baroContract3,
+      url: BaroContract3,
       caption: "대여자의 계약 확인, 계약성사"
     },
     {
-      url: baroVerification,
+      url: BaroVerification,
       caption: "본인인증"
     }
   ]
