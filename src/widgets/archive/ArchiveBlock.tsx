@@ -1,7 +1,7 @@
 import {motion} from "framer-motion";
-import {archivePath} from "../const/archivePath.ts";
+import {archivePath} from "../../shared/const/archivePath.ts";
 import ArchiveBlockImage from "./ArchiveBlockImage.tsx";
-import {archiveNameType} from "../types/archiveTypes.ts";
+import {archiveNameType} from "../../shared/types/archiveTypes.ts";
 
 export default function ArchiveBlock({name} : archiveNameType) {
   const handleKeyPress = (url: string) => (event: React.KeyboardEvent) => {

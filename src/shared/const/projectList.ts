@@ -1,14 +1,14 @@
 // 포폴
-import {portfolioInfo} from "../info/portfolioInfo.ts";
+import {portfolioInfo} from "../project/info/portfolioInfo.ts";
 
 // 바로바로
-import {baroInfo} from "../info/baroInfo.ts";
+import {baroInfo} from "../project/info/baroInfo.ts";
 
 // 자냥
-import {janyangInfo} from "../info/janyangInfo.ts";
+import {janyangInfo} from "../project/info/janyangInfo.ts";
 
 // 미루니
-import {miruniInfo} from "../info/miruniInfo.ts";
+import {miruniInfo} from "../project/info/miruniInfo.ts";
 
 export const projects = [
   {

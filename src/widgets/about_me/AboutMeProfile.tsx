@@ -1,5 +1,5 @@
 import {motion} from "framer-motion";
-import {aboutMeStyles} from "../styles/aboutMeStyles.ts";
+import {aboutMeStyles} from "../../shared/styles/aboutMeStyles.ts";
 import {profilePictureVariants} from "../../feature/animations/profileAnimations.ts";
 import {StaticImage} from "gatsby-plugin-image";
 

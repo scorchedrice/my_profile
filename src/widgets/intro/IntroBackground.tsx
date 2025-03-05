@@ -1,4 +1,4 @@
-import {introStyle} from "../styles/introStyles.ts";
+import {introStyle} from "../../shared/styles/introStyles.ts";
 import {motion} from "framer-motion";
 import useScrollAnimations from "../../feature/hooks/useScrollAnimations.ts";
 

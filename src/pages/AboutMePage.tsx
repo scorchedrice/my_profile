@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import {aboutMeStyles} from "../shared/styles/aboutMeStyles.ts";
-import AboutMeContent from "../shared/ui/AboutMeContent.tsx";
-import AboutMeProfile from "../shared/ui/AboutMeProfile.tsx";
+import AboutMeContent from "../widgets/about_me/AboutMeContent.tsx";
+import AboutMeProfile from "../widgets/about_me/AboutMeProfile.tsx";
 
 export default function AboutMePage() {
   return (

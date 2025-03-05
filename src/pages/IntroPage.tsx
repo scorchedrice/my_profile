@@ -1,9 +1,9 @@
 import {motion} from "framer-motion"
 import {introStyle} from "../shared/styles/introStyles.ts";
-import {MainComment} from "../shared/ui/IntroComments.tsx";
+import {MainComment} from "../widgets/intro/IntroComment.tsx";
 import IntroComments from "../widgets/intro/IntroComments.tsx";
-import IntroDoubleArrowDown from "../shared/ui/IntroDoubleArrowDown.tsx";
-import IntroBackground from "../shared/ui/IntroBackground.tsx";
+import IntroDoubleArrowDown from "../widgets/intro/IntroDoubleArrowDown.tsx";
+import IntroBackground from "../widgets/intro/IntroBackground.tsx";
 
 export default function IntroPage() {
   return (

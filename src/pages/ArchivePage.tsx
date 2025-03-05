@@ -1,5 +1,5 @@
 import {archiveStyles} from "../shared/styles/archiveStyles.ts";
-import ArchiveBlock from "../shared/ui/ArchiveBlock.tsx";
+import ArchiveBlock from "../widgets/archive/ArchiveBlock.tsx";
 
 export default function ArchivePage() {
   return (

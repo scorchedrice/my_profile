@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: "/my_profile",
+  pathPrefix: "/",
   flags: {
     DEV_SSR: true,
   },

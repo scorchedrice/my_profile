@@ -1,4 +1,4 @@
-import {archivePath} from "../const/archivePath.ts";
+import {archivePath} from "../../shared/const/archivePath.ts";
 import {FaGithub} from "react-icons/fa";
 import {DiGithubFull} from "react-icons/di";
 import {SiGithubpages} from "react-icons/si";

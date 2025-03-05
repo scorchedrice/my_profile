@@ -1,6 +1,6 @@
 import {motion} from "framer-motion";
 import {introStyle} from "../../shared/styles/introStyles.ts";
-import {FirstComment, LastComment, SecondComment} from "../../shared/ui/IntroComments.tsx";
+import {FirstComment, LastComment, SecondComment} from "./IntroComment.tsx";
 import useScrollAnimations from "../../feature/hooks/useScrollAnimations.ts";
 
 export default function IntroComments() {

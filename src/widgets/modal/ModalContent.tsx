@@ -1,5 +1,5 @@
 import ProjectOverview from "../project/detail/ProjectOverview.tsx";
-import {projectsDetail} from "../../shared/project/const/myProjectList.ts";
+import {projectsDetail} from "../../shared/const/projectList.ts";
 import ProjectDescription from "../project/detail/ProjectDescription.tsx";
 import ProjectImages from "../project/detail/ProjectImages.tsx";
 

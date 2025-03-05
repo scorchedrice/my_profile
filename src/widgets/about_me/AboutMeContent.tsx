@@ -1,7 +1,7 @@
 import {motion} from "framer-motion";
 import {profileTextVariant} from "../../feature/animations/profileAnimations.ts";
-import {aboutMeStyles} from "../styles/aboutMeStyles.ts";
-import CopyButton from "./CopyUI.tsx";
+import {aboutMeStyles} from "../../shared/styles/aboutMeStyles.ts";
+import CopyButton from "../archive/CopyMail.tsx";
 
 export default function AboutMeContent() {
   return (

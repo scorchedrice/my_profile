@@ -23,7 +23,7 @@
     "gatsby-plugin-typescript": "^5.14.0",
     "gatsby-source-filesystem": "^5.14.0",
     "gatsby-transformer-sharp": "^5.14.0",
-    "react": "^19.0.0",
+    "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^5.0.1",
@@ -31,7 +31,7 @@
     "zustand": "^5.0.3"
   },
   "devDependencies": {
-    "@types/react": "^19.0.10",
+    "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "@types/react-modal": "^3.16.3",
     "autoprefixer": "^10.4.17",
