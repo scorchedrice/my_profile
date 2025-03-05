@@ -46,6 +46,7 @@ const RAW_RUNTIME_STATE =
           ["gatsby-source-filesystem", "virtual:515c8382ea6b24ae9b836e71ab72a6ca6c9929f37a68c79e90d49935a75d97ea1c9cc89e073ab3b63d91e8c9c881679f0a4d3e1a25029010d0052894350d97f6#npm:5.14.0"],\
           ["gatsby-transformer-sharp", "virtual:515c8382ea6b24ae9b836e71ab72a6ca6c9929f37a68c79e90d49935a75d97ea1c9cc89e073ab3b63d91e8c9c881679f0a4d3e1a25029010d0052894350d97f6#npm:5.14.0"],\
           ["gh-pages", "npm:6.3.0"],\
+          ["global", "npm:4.4.0"],\
           ["postcss", "npm:8.5.3"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:515c8382ea6b24ae9b836e71ab72a6ca6c9929f37a68c79e90d49935a75d97ea1c9cc89e073ab3b63d91e8c9c881679f0a4d3e1a25029010d0052894350d97f6#npm:18.3.1"],\
@@ -8206,6 +8207,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["dom-walk", [\
+      ["npm:0.1.2", {\
+        "packageLocation": "../../.yarn/berry/cache/dom-walk-npm-0.1.2-7d20a1a8d8-10c0.zip/node_modules/dom-walk/",\
+        "packageDependencies": [\
+          ["dom-walk", "npm:0.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["domelementtype", [\
       ["npm:2.3.0", {\
         "packageLocation": "../../.yarn/berry/cache/domelementtype-npm-2.3.0-02de7cbfba-10c0.zip/node_modules/domelementtype/",\
@@ -11136,6 +11146,17 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["global", [\
+      ["npm:4.4.0", {\
+        "packageLocation": "../../.yarn/berry/cache/global-npm-4.4.0-888ee8033d-10c0.zip/node_modules/global/",\
+        "packageDependencies": [\
+          ["global", "npm:4.4.0"],\
+          ["min-document", "npm:2.19.0"],\
+          ["process", "npm:0.11.10"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["global-modules", [\
       ["npm:2.0.0", {\
         "packageLocation": "../../.yarn/berry/cache/global-modules-npm-2.0.0-f71d340362-10c0.zip/node_modules/global-modules/",\
@@ -13314,6 +13335,16 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/mimic-response-npm-4.0.0-c080547e26-10c0.zip/node_modules/mimic-response/",\
         "packageDependencies": [\
           ["mimic-response", "npm:4.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["min-document", [\
+      ["npm:2.19.0", {\
+        "packageLocation": "../../.yarn/berry/cache/min-document-npm-2.19.0-458cdb3d84-10c0.zip/node_modules/min-document/",\
+        "packageDependencies": [\
+          ["min-document", "npm:2.19.0"],\
+          ["dom-walk", "npm:0.1.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -15864,6 +15895,7 @@ const RAW_RUNTIME_STATE =
           ["gatsby-source-filesystem", "virtual:515c8382ea6b24ae9b836e71ab72a6ca6c9929f37a68c79e90d49935a75d97ea1c9cc89e073ab3b63d91e8c9c881679f0a4d3e1a25029010d0052894350d97f6#npm:5.14.0"],\
           ["gatsby-transformer-sharp", "virtual:515c8382ea6b24ae9b836e71ab72a6ca6c9929f37a68c79e90d49935a75d97ea1c9cc89e073ab3b63d91e8c9c881679f0a4d3e1a25029010d0052894350d97f6#npm:5.14.0"],\
           ["gh-pages", "npm:6.3.0"],\
+          ["global", "npm:4.4.0"],\
           ["postcss", "npm:8.5.3"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:515c8382ea6b24ae9b836e71ab72a6ca6c9929f37a68c79e90d49935a75d97ea1c9cc89e073ab3b63d91e8c9c881679f0a4d3e1a25029010d0052894350d97f6#npm:18.3.1"],\
