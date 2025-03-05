@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact=self.webpackChunkreact||[]).push([[125],{7576:function(e,t,n){n.r(t),n.d(t,{Head:function(){return c}});var l=n(3746),a=n(3113);t.default=()=>l.createElement("main",null,l.createElement("h1",null,"페이지를 찾을 수 없습니다"),l.createElement("p",null,"죄송합니다. 요청하신 페이지가 존재하지 않습니다."),l.createElement(a.Link,{to:"/"},"홈으로 돌아가기"));const c=()=>l.createElement("title",null,"Not Found")}}]);
+//# sourceMappingURL=component---src-pages-404-js-e1be4add59708fd66da7.js.map
