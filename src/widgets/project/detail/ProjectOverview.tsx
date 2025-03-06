@@ -1,15 +1,10 @@
-import {ProjectDetailType} from "../../../shared/types/projectTypes.ts";
+import {OverviewProps} from "../../../shared/types/projectTypes.ts";
 import { FaLink } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { IoIosClose } from "react-icons/io";
 
-interface OverviewProps extends Pick<ProjectDetailType, 'overview'> {
-  onClose: () => void;  // onClose prop 추가
-}
-
 export default function ProjectOverview({ overview, onClose } : OverviewProps ) {
   const { title, period, github, demo, teamMembers, role, mainImg } = overview;
-
   return (
     <div className="relative w-full">
       <div className="flex flex-col items-center">

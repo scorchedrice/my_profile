@@ -4,7 +4,7 @@ import {StaticImage} from "gatsby-plugin-image";
 
 export default function StaticPortfolio() {
   return <StaticImage
-    src="../../../assets/project/portfolio/portfolio.png"
+    src="../../../assets/projects/portfolio/portfolio.png"
     alt="Portfolio"
   />
 }

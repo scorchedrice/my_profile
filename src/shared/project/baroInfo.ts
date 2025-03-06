@@ -1,12 +1,12 @@
-import BaroMain from "../../../assets/project/barobaro/baro_main.png";
-import BaroSign from "../../../assets/project/barobaro/baro_sign.png";
-import BaroPost from "../../../assets/project/barobaro/baro_post.png";
-import BaroDetail from "../../../assets/project/barobaro/baro_detail.png";
-import BaroPin from "../../../assets/project/barobaro/baro_pin.png";
-import BaroContract1 from "../../../assets/project/barobaro/baro_contract_1.png";
-import BaroContract2 from "../../../assets/project/barobaro/baro_contract_2.png";
-import BaroContract3 from "../../../assets/project/barobaro/baro_contract_3.png";
-import BaroVerification from "../../../assets/project/barobaro/baro_verification.png";
+import BaroMain from "../../assets/projects/barobaro/baro_main.png";
+import BaroSign from "../../assets/projects/barobaro/baro_sign.png";
+import BaroPost from "../../assets/projects/barobaro/baro_post.png";
+import BaroDetail from "../../assets/projects/barobaro/baro_detail.png";
+import BaroPin from "../../assets/projects/barobaro/baro_pin.png";
+import BaroContract1 from "../../assets/projects/barobaro/baro_contract_1.png";
+import BaroContract2 from "../../assets/projects/barobaro/baro_contract_2.png";
+import BaroContract3 from "../../assets/projects/barobaro/baro_contract_3.png";
+import BaroVerification from "../../assets/projects/barobaro/baro_verification.png";
 
 export const baroInfo = {
   id: 2,

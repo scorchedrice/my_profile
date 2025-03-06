@@ -1,4 +1,4 @@
-export type useModalStoreType = {
+export interface useModalStoreType {
   isOpen: boolean;
   selectedProjectId: number;
   actions: {
@@ -7,9 +7,7 @@ export type useModalStoreType = {
   }
 }
 
-
-
-export type useProjectFilterStoreType = {
+export interface useProjectFilterStoreType {
   filterType: "all" | "team" | "personal" ;
   actions: {
     setFilterType: (filterType: "all" | "team" | "personal") => void;

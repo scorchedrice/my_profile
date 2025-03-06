@@ -1,7 +1,6 @@
-import {menuItems} from "../../shared/const/menuItemsList.ts";
 import {VscFeedback} from "react-icons/vsc";
 import useScrollToSection from "../../feature/hooks/useScrollToSection.ts";
-import {feedBackUrl} from "../../shared/const/navConst.ts";
+import {feedBackUrl, menuItems} from "../../shared/const/navConst.ts";
 import {navStyles} from "../../shared/styles/navStyles.ts";
 
 export default function NormalNav() {

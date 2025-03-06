@@ -1,8 +1,4 @@
-// @ts-ignore
-import * as React from 'react';
-import {ProjectDetailType} from "../../../shared/types/projectTypes.ts";
-
-type DescriptionProps = Pick<ProjectDetailType, 'description'>
+import {DescriptionProps} from "../../../shared/types/projectTypes.ts";
 
 export default function ProjectDescription({ description }: DescriptionProps) {
   return (

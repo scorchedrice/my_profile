@@ -15,7 +15,7 @@ export default function AboutMeProfile() {
         aria-label="애니메이션 동작 프로필사진"
       >
         <StaticImage
-          src="../../assets/profile.jpg"
+          src="../../assets/profile_2.jpg"
           alt="profile"
           className="w-full h-full object-cover"
         />

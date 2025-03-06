@@ -1,4 +1,4 @@
-export const techStackData = {
+const skillCategories = {
   frontend: [
     { name: "React", Url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
     { name: "Next.js", Url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" },
@@ -25,3 +25,10 @@ export const techStackData = {
     { name: "Jest", Url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg" }
   ]
 };
+
+export const skillCategoryList = [
+  { name: "Language", data: skillCategories.language },
+  { name: "Frontend", data: skillCategories.frontend },
+  { name: "Backend", data: skillCategories.backend },
+  { name: "Testing & Tools", data: skillCategories.test }
+];

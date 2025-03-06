@@ -1,15 +1,17 @@
-// 포폴
-import {portfolioInfo} from "../project/info/portfolioInfo.ts";
+// 프로젝트 상세 정보들
+import {portfolioInfo} from "../project/portfolioInfo.ts";
+import {baroInfo} from "../project/baroInfo.ts";
+import {janyangInfo} from "../project/janyangInfo.ts";
+import {miruniInfo} from "../project/miruniInfo.ts";
 
-// 바로바로
-import {baroInfo} from "../project/info/baroInfo.ts";
+export const projectsDetail = [
+  portfolioInfo,
+  baroInfo,
+  janyangInfo,
+  miruniInfo,
+]
 
-// 자냥
-import {janyangInfo} from "../project/info/janyangInfo.ts";
-
-// 미루니
-import {miruniInfo} from "../project/info/miruniInfo.ts";
-
+// 프로젝트들의 간략한 소개
 export const projects = [
   {
     id: 1,
@@ -40,10 +42,3 @@ export const projects = [
     type: "team"
   }
 ];
-
-export const projectsDetail = [
-  portfolioInfo,
-  baroInfo,
-  janyangInfo,
-  miruniInfo,
-]

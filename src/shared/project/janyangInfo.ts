@@ -1,9 +1,9 @@
-import JanyangMain from "../../../assets/project/janyang/janyang_main.png";
-import JanyangCreateAlarm from "../../../assets/project/janyang/janyang_create_alarm.png";
-import JanyangEnterMission from "../../../assets/project/janyang/janyang_enter_mission.png";
-import JanyangMission from "../../../assets/project/janyang/janyang_mission.png";
-import JanyangChangeMission from "../../../assets/project/janyang/janyang_change_mission.png";
-import JanyangSoloMission from "../../../assets/project/janyang/janyang_solo_mission.png";
+import JanyangMain from "../../assets/projects/janyang/janyang_main.png";
+import JanyangCreateAlarm from "../../assets/projects/janyang/janyang_create_alarm.png";
+import JanyangEnterMission from "../../assets/projects/janyang/janyang_enter_mission.png";
+import JanyangMission from "../../assets/projects/janyang/janyang_mission.png";
+import JanyangChangeMission from "../../assets/projects/janyang/janyang_change_mission.png";
+import JanyangSoloMission from "../../assets/projects/janyang/janyang_solo_mission.png";
 
 export const janyangInfo = {
   id: 3,

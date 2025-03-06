@@ -1,9 +1,9 @@
-type SkillItem = {
+interface SkillItem {
   name: string;
   Url: string;
   description?: string;
 }
 
-export type SkillProps = {
+export interface SkillProps {
   skillList: SkillItem[];
 }

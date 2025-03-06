@@ -1,8 +1,8 @@
-import {menuItems} from "../../shared/const/menuItemsList.ts";
 import {motion} from "framer-motion";
 import useScrollToSection from "../../feature/hooks/useScrollToSection.ts";
 import {IoClose, IoMenu} from "react-icons/io5";
 import {navStyles} from "../../shared/styles/navStyles.ts";
+import {menuItems} from "../../shared/const/navConst.ts";
 
 export default function DropDownNav() {
   const { isOpen, setIsOpen, scrollToSection } = useScrollToSection()

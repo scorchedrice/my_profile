@@ -1,8 +1,8 @@
-import miruniDiary from "../../../assets/project/miruni/miruniDiary.png"
-import miruniMain from "../../../assets/project/miruni/miruniMain.png"
-import miruniOCR from "../../../assets/project/miruni/miruniOCR.png"
-import miruniStudy from "../../../assets/project/miruni/miruniStudy.png"
-import miruniStudyStart from "../../../assets/project/miruni/miruniStudy_start.png"
+import miruniDiary from "../../assets/projects/miruni/miruniDiary.png"
+import miruniMain from "../../assets/projects/miruni/miruniMain.png"
+import miruniOCR from "../../assets/projects/miruni/miruniOCR.png"
+import miruniStudy from "../../assets/projects/miruni/miruniStudy.png"
+import miruniStudyStart from "../../assets/projects/miruni/miruniStudy_start.png"
 
 
 export const miruniInfo = {

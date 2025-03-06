@@ -34,3 +34,12 @@ export interface ProjectDetailType {
     caption: string;
   }>;
 }
+
+export interface DescriptionProps extends Pick<ProjectDetailType, 'description'> {}
+
+export interface OverviewProps extends Pick<ProjectDetailType, 'overview'> {
+  onClose: () => void;  // onClose prop 추가
+}
+
+export interface DescriptionProps extends Pick<ProjectDetailType, 'images'> {}
+

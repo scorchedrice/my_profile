@@ -1,31 +1,7 @@
-// @ts-ignore
-import * as React from 'react';
-import {ProjectDetailType} from "../../../shared/types/projectTypes.ts";
+import {DescriptionProps} from "../../../shared/types/projectTypes.ts";
 import Modal from "react-modal";
 import {useState} from "react";
-import type { Styles } from "react-modal";
-
-type DescriptionProps = Pick<ProjectDetailType, 'images'>
-
-const imgModalStyle : Styles = {
-  overlay: {
-    backgroundColor: 'rgba(0, 0, 0, 0.9)',
-    zIndex: 50,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  content: {
-    position: 'absolute',
-    inset: 0,
-    border: 'none',
-    background: 'transparent',
-    overflow: 'hidden',
-    padding: 0,
-    width: '100vw',
-    height: '100vh'
-  }
-}
+import {EnlargedImageModalStyle} from "../../../shared/styles/projectDescriptionModalStyles.ts";
 
 export default function ProjectImages({ images } : DescriptionProps) {
   const [selectedImage, setSelectedImage] = useState<{url: string, caption: string} | null>(null);
@@ -58,7 +34,7 @@ export default function ProjectImages({ images } : DescriptionProps) {
       <Modal
         isOpen={selectedImage !== null}
         onRequestClose={() => setSelectedImage(null)}
-        style={imgModalStyle}
+        style={EnlargedImageModalStyle}
         contentLabel="Image Modal"
       >
         <div

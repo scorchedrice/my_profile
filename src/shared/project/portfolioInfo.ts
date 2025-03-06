@@ -1,4 +1,4 @@
-import Portfolio from "../../../assets/project/portfolio/portfolio.png";
+import Portfolio from "../../assets/projects/portfolio/portfolio.png";
 
 export const portfolioInfo = {
   id: 1,
@@ -32,13 +32,13 @@ export const portfolioInfo = {
         content: "프로필페이지 특성을 고려하여, SSG 프레임워크인 Gatsby로 체제를 전환했습니다. 시멘틱 태그, Head API를 활용하여 SEO 작업을 진행했습니다."
       },
       {
-        title: "scorchedrice.github.io/my_profile → scorchedrice.com (2025.03)",
-        content: "새로운 도메인을 등록하여 배포를 진행했습니다."
+        title: "scorchedrice.com (2025.03)",
+        content: "새로운 도메인을 등록하여 배포를 진행했습니다. (Cloudflare)"
       },
     ],
     techStack: {
       frontend: ["Gatsby", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      deployment: ["Github Action"],
+      deployment: ["Github Action", "CloudFlare"],
       tools: ["Git", "GitHub"]
     },
     challenges: [
