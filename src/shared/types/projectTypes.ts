@@ -41,5 +41,5 @@ export interface OverviewProps extends Pick<ProjectDetailType, 'overview'> {
   onClose: () => void;  // onClose prop 추가
 }
 
-export interface DescriptionProps extends Pick<ProjectDetailType, 'images'> {}
+export interface ProjectImageProps extends Pick<ProjectDetailType, 'images'> {}
 

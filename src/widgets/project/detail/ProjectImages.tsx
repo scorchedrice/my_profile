@@ -1,9 +1,9 @@
-import {DescriptionProps} from "../../../shared/types/projectTypes.ts";
+import {ProjectImageProps} from "../../../shared/types/projectTypes.ts";
 import Modal from "react-modal";
 import {useState} from "react";
 import {EnlargedImageModalStyle} from "../../../shared/styles/projectDescriptionModalStyles.ts";
 
-export default function ProjectImages({ images } : DescriptionProps) {
+export default function ProjectImages({ images } : ProjectImageProps) {
   const [selectedImage, setSelectedImage] = useState<{url: string, caption: string} | null>(null);
 
   return (

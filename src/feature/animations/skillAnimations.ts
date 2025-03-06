@@ -1,6 +1,6 @@
 // 3. SkillsPage
 // 3-1. 컨테이너
-export const containerVariants = {
+export const skillsParentVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -11,7 +11,7 @@ export const containerVariants = {
 };
 
 // 3-2. 각 기술역할 애니메이션
-export const sectionVariants = {
+export const skillsChildVariants = {
   hidden: {
     opacity: 0,
     x: 50

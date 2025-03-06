@@ -1,6 +1,5 @@
 export const aboutMeStyles = {
-  contentWrapper: "max-w-2xl mx-auto w-full",
-  content: "flex flex-col md:flex-row items-center p-4",
+  content: "flex flex-col md:flex-row items-center p-4 max-w-2xl mx-auto w-full",
   title: "text-[50px] font-bold text-gray-700 text-center",
   profileImage: "w-[250px] h-[250px] rounded-full overflow-hidden",
   contentTitle: "font-bold text-gray-700 text-xl",

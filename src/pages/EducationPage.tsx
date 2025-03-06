@@ -7,15 +7,13 @@ export default function EducationPage() {
     <section id="Education" className={educationStyles.section}>
       <h1 className={educationStyles.title}>EDUCATION</h1>
       <div className={educationStyles.content}>
-        <div className="max-w-3xl mx-auto">
-          {educationData.map((edu, index) => (
-            <EducationBlock
-              key={index}
-              name={edu.name}
-              content={edu.content}
-            />
-          ))}
-        </div>
+        {educationData.map((edu, index) => (
+          <EducationBlock
+            key={index}
+            name={edu.name}
+            content={edu.content}
+          />
+        ))}
       </div>
     </section>
   )
