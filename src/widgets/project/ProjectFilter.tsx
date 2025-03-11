@@ -1,5 +1,6 @@
 import useProjectFilter from "../../feature/hooks/useProjectFilter.ts";
 import {useSetFilterType} from "../../shared/stores/useProjectFilterStore.ts";
+import {filterStyles} from "../../shared/styles/projectStyles.ts";
 
 export default function ProjectFilter() {
   const {
@@ -8,7 +9,7 @@ export default function ProjectFilter() {
   const setProjectType = useSetFilterType();
 
   return (
-    <div className="w-full lg:w-64 bg-white rounded-lg shadow-md p-4 h-fit">
+    <div className={filterStyles.filter}>
       <div className="space-y-2">
         <button
           className={getButtonStyle("all")}

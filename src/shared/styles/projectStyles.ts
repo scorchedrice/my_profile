@@ -1,6 +1,7 @@
 const buttonBaseStyle = "w-full py-2 px-4 rounded-lg transition-all duration-200 text-left";
 
 export const filterStyles = {
+  filter : "w-full lg:w-64 bg-white rounded-lg shadow-md p-4 h-fit",
   selectedButton : `${buttonBaseStyle} bg-blue-600 text-white shadow-md font-medium`,
   noneSelectedButton : `${buttonBaseStyle} hover:bg-gray-100`
 }

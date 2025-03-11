@@ -2,7 +2,7 @@ import {AnimatePresence, motion} from "framer-motion";
 import ProjectSkills from "./ProjectSkills.tsx";
 import { CgReadme } from "react-icons/cg";
 import useProjectFilter from "../../feature/hooks/useProjectFilter.ts";
-import StaticImageRender from "./StaticImageRender.tsx";
+import StaticImageRender from "../../shared/static/StaticImageRender.tsx";
 import useProjectModal from "../../feature/hooks/useProjectModal.ts";
 import useCalculateProjectPageHeight from "../../feature/hooks/useCalculateProjectPageHeight.ts";
 import {projectStyles} from "../../shared/styles/projectStyles.ts";

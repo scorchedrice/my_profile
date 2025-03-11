@@ -9,7 +9,7 @@ import BaroContract3 from "../../assets/projects/barobaro/baro_contract_3.png";
 import BaroVerification from "../../assets/projects/barobaro/baro_verification.png";
 
 export const baroInfo = {
-  id: 2,
+  id: 3,
     overview: {
   title: "바로바로",
     period: "2024.09 - 2024.11",

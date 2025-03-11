@@ -1,7 +1,7 @@
 import Portfolio from "../../assets/projects/portfolio/portfolio.png";
 
 export const portfolioInfo = {
-  id: 1,
+  id: 2,
   overview: {
     title: "포트폴리오",
     period: "2024.12-진행중",

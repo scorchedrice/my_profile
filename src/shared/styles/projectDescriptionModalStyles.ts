@@ -1,5 +1,3 @@
-import type {Styles} from "react-modal";
-
 export const ProjectDescriptionModalStyles = {
   content: {
     top: '50%',
@@ -11,7 +9,7 @@ export const ProjectDescriptionModalStyles = {
   },
 };
 
-export const EnlargedImageModalStyle : Styles = {
+export const EnlargedImageModalStyle = {
   overlay: {
     backgroundColor: 'rgba(0, 0, 0, 0.9)',
     zIndex: 50,

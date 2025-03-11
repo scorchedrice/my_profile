@@ -6,7 +6,7 @@ import miruniStudyStart from "../../assets/projects/miruni/miruniStudy_start.png
 
 
 export const miruniInfo = {
-  id: 4,
+  id: 5,
   overview: {
     title: "미루니",
     period: "2024.11 - 2024.12",

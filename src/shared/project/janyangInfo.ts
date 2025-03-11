@@ -6,7 +6,7 @@ import JanyangChangeMission from "../../assets/projects/janyang/janyang_change_m
 import JanyangSoloMission from "../../assets/projects/janyang/janyang_solo_mission.png";
 
 export const janyangInfo = {
-  id: 3,
+  id: 4,
   overview: {
     title: "자냥",
     period: "2024.08 - 2024.09",
