@@ -9,9 +9,9 @@ const skillCategories = {
   ],
   backend: [
     { name: "Nest.js", Url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg"},
-    { name: "Postgres", Url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" },
-    { name: "MongoDB", Url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"},
-    { name: "Mongoose", Url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongoose/mongoose-original.svg" }
+    // { name: "Postgres", Url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" },
+    // { name: "MongoDB", Url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"},
+    // { name: "Mongoose", Url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongoose/mongoose-original.svg" }
   ],
   language: [
     { name: "HTML5", Url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" },
@@ -21,8 +21,8 @@ const skillCategories = {
     { name: "Dart", Url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" },
     { name: "Python", Url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" }
   ],
-  test: [
-    { name: "Jest", Url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg" }
+  tool: [
+    { name: "Figma", Url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" }
   ]
 };
 
@@ -30,5 +30,5 @@ export const skillCategoryList = [
   { name: "Language", data: skillCategories.language },
   { name: "Frontend", data: skillCategories.frontend },
   { name: "Backend", data: skillCategories.backend },
-  { name: "Testing & Tools", data: skillCategories.test }
+  { name: "Tool", data: skillCategories.tool }
 ];
